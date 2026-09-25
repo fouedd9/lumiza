@@ -1,0 +1,462 @@
+{
+  "Metadata": {
+    "title": "LUMIZA — Light that softens every evening",
+    "description": "Discover LUMIZA, an elegant rechargeable cordless LED lamp for homes and professional spaces."
+  },
+  "Navigation": {
+    "homeLabel": "LUMIZA home",
+    "primaryLabel": "Primary navigation",
+    "advantages": "Benefits",
+    "offers": "Our offers",
+    "questions": "Questions",
+    "cta": "View offers",
+    "languageLabel": "Choose language",
+    "themeLabel": "Choose theme",
+    "themes": {
+      "light": "Light theme",
+      "dark": "Dark theme",
+      "system": "System theme"
+    },
+    "languages": {
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch"
+    }
+  },
+  "Home": {
+    "eyebrow": "Cordless light · Contemporary presence",
+    "titleLead": "Light that makes every evening",
+    "titleAccent": "feel warmer.",
+    "cta": "Explore our offers",
+    "secondaryCta": "See the lamp",
+    "heroNote": "Three planned finishes · availability to be confirmed",
+    "offers": {
+      "eyebrow": "Choose your format",
+      "title": "More light, fairly priced.",
+      "description": "Three formats to bring {productName} into your home or professional spaces.",
+      "lamp": "lamp",
+      "soloNote": "One lamp per pack",
+      "select": "Choose a finish",
+      "cart": {
+        "add": "Add to selection",
+        "title": "Your selection",
+        "empty": "Choose a pack and finish to begin.",
+        "checkout": "Review order",
+        "remove": "Remove",
+        "quantity": "Packs",
+        "color": "Finish",
+        "subtotal": "Subtotal",
+        "max": "Maximum 30 physical lamps per order. Finish availability is not yet confirmed.",
+        "colors": { "black": "Black", "gold": "Gold", "silver": "Silver" }
+      },
+      "professional": "Professional offer",
+      "savings": "Save",
+      "packNote": "The PRO pack contains ten lamps.",
+      "colorNote": "Finish availability remains subject to supplier confirmation.",
+      "pricingNote": "Prices in EUR. Shipping is free in France and €10 per order to Belgium, Germany and Switzerland. Tax configuration is not finalised."
+    }
+  },
+  "Benefits": {
+    "eyebrow": "Small lamp, remarkable effect",
+    "title": "Designed to move with your moments.",
+    "cordless": {
+      "title": "Cordless",
+      "description": "A table light that can be placed freely, with no cable needed while in use."
+    },
+    "rechargeable": {
+      "title": "Rechargeable",
+      "description": "The lamp recharges by USB, ready to accompany your everyday spaces."
+    },
+    "touch": {
+      "title": "Touch control",
+      "description": "An integrated touch control keeps every interaction simple and immediate."
+    },
+    "portable": {
+      "title": "Easy to move",
+      "description": "Its contemporary silhouette moves naturally from one table to another."
+    }
+  },
+  "Product": {
+    "eyebrow": "Meet LUMIZA",
+    "title": "A luminous object, from every angle.",
+    "description": "Discover the LUMIZA silhouette in black, gold and silver through photographs of the product.",
+    "gallery": {
+      "label": "LUMIZA product gallery",
+      "previous": "Previous image",
+      "next": "Next image",
+      "expand": "Expand image",
+      "close": "Close expanded image"
+    },
+    "colors": {
+      "legend": "Planned finish",
+      "black": "Black",
+      "gold": "Gold",
+      "silver": "Silver",
+      "selected": "Selection",
+      "provisional": "Black, gold and silver finishes remain subject to supplier confirmation.",
+      "missingImage": "The image for this finish is temporarily unavailable."
+    },
+    "facts": {
+      "power": "Stated power",
+      "temperature": "Stated temperature",
+      "control": "Control",
+      "touch": "Touch",
+      "charge": "Charging"
+    }
+  },
+  "UseCases": {
+    "eyebrow": "One light, many atmospheres",
+    "title": "At home and across hospitality spaces.",
+    "home": {
+      "title": "At home",
+      "description": "Elegant light for dinner, reading or simply creating a warmer atmosphere."
+    },
+    "restaurant": {
+      "title": "Restaurants and bars",
+      "description": "A cordless table lamp designed to create a warm atmosphere without cluttering the table."
+    },
+    "hospitality": {
+      "title": "Hotels and hospitality",
+      "description": "A contemporary silhouette for guest rooms, lounges and welcoming spaces."
+    },
+    "terrace": {
+      "title": "Terraces & outdoor spaces",
+      "description": "Create a warm atmosphere for guests indoors or on a terrace when conditions are suitable."
+    },
+    "gift": {
+      "title": "An elegant gift idea",
+      "description": "A design-minded, practical gift for Christmas and other special occasions."
+    },
+    "finishes": {
+      "title": "Three elegant finishes",
+      "description": "Choose the finish that suits your space: gold, silver or black."
+    },
+    "terraceNote": "Terrace use may be considered in suitable conditions; no water-resistance rating has been confirmed at this stage."
+  },
+  "Faq": {
+    "eyebrow": "The essentials, clearly explained",
+    "title": "Frequently asked questions",
+    "description": "Find answers to the most common questions about LUMIZA.",
+    "cordless": {
+      "question": "Is the lamp cordless?",
+      "answer": "Yes. LUMIZA is designed to operate without a cable while in use and to be moved easily."
+    },
+    "recharge": {
+      "question": "How is the lamp recharged?",
+      "answer": "Charging is planned via USB. Battery life and charging time still need to be confirmed."
+    },
+    "colors": {
+      "question": "Which colours are available?",
+      "answer": "Black, gold and silver finishes are planned, subject to final supplier confirmation."
+    },
+    "multiple": {
+      "question": "Can I order several lamps?",
+      "answer": "Choose SOLO for one lamp, DUO for two or PRO for ten, then adjust the number of packs in your selection."
+    },
+    "shipping": {
+      "question": "Do you ship outside France?",
+      "answer": "Delivery is available to France, Belgium, Germany and Switzerland. Shipping charges are shown at checkout. Estimated delivery within {min}–{max} business days."
+    },
+    "payment": {
+      "question": "How does payment work?",
+      "answer": "Card payments are processed in Stripe’s secure interface. LUMIZA does not store your full card number."
+    }
+  },
+  "FinalCta": {
+    "eyebrow": "Your space deserves its light",
+    "title": "Choose the format that fits your world.",
+    "cta": "View offers"
+  },
+  "Footer": {
+    "brandNote": "A contemporary rechargeable cordless LED lamp created for European homes and professional spaces.",
+    "navigationLabel": "Footer navigation",
+    "navigation": "Navigation",
+    "advantages": "Benefits",
+    "product": "The lamp",
+    "offers": "Our offers",
+    "questions": "Questions",
+    "information": "Information",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "terms": "Terms & Conditions",
+    "shippingReturns": "Shipping & returns",
+    "cookies": "Cookies",
+    "cookiePreferences": "Cookie preferences",
+    "contactPending": "Contact details will be published before launch.",
+    "socialLabel": "Social media",
+    "facebook": "LUMIZA on Facebook",
+    "instagram": "LUMIZA on Instagram",
+    "securePayment": "Secure payment",
+    "cardPayment": "Card"
+  },
+  "Purchase": {
+    "brand": "LUMIZA",
+    "name": "Rechargeable cordless LED lamp",
+    "description": "A USB-rechargeable table lamp with touch control and 3,500 K light.",
+    "color": "Finish",
+    "selected": "Selected",
+    "quantity": "Number of packs",
+    "increase": "Add a pack",
+    "decrease": "Remove a pack",
+    "finishIncrease": "Add a lamp in",
+    "finishDecrease": "Remove a lamp in",
+    "add": "Add to cart",
+    "max": "Maximum 30 lamps per order or 10 packs per line.",
+    "unavailable": "Purchase options are temporarily unavailable.",
+    "compose": "Compose your pack of",
+    "composeSuffix": "",
+    "selectedCount": "selected",
+    "remainingSingle": "lamp left to choose",
+    "remainingPlural": "lamps left to choose",
+    "colors": { "black": "Black", "gold": "Gold", "silver": "Silver" },
+    "packs": {
+      "legend": "Choose a pack",
+      "lamp": "lamp",
+      "lamps": "lamps",
+      "save": "Save",
+      "professional": "Professional offer"
+    }
+  },
+  "Cart": {
+    "title": "Your cart",
+    "open": "Open cart",
+    "close": "Close cart",
+    "empty": "Your cart is empty.",
+    "continue": "Continue shopping",
+    "checkout": "Continue to checkout",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "nextStep": "Calculated at the next step",
+    "max": "Maximum 30 lamps per order or 10 packs per line.",
+    "increase": "Increase quantity",
+    "decrease": "Decrease quantity",
+    "lamp": "lamp",
+    "lamps": "lamps",
+    "perPack": "per pack",
+    "unavailable": "Pack unavailable",
+    "composition": "Per pack:",
+    "packsLabel": "packs",
+    "colors": { "black": "Black", "gold": "Gold", "silver": "Silver" }
+  },
+  "Checkout": {
+    "eyebrow": "Secure checkout",
+    "title": "Review your order.",
+    "description": "Review your selection and complete your payment securely.",
+    "empty": "Your selection is empty.",
+    "back": "Back to offers",
+    "country": "Delivery country",
+    "countries": {
+      "FR": "France",
+      "BE": "Belgium",
+      "DE": "Germany",
+      "CH": "Switzerland"
+    },
+    "quantity": "Packs",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "lamp": "lamp",
+    "lamps": "lamps",
+    "perPack": "per pack",
+    "represented": "in total",
+    "composition": "Per pack:",
+    "tax": "Tax configuration will be confirmed before live sales.",
+    "delivery": "Estimated delivery within {min}–{max} business days.",
+    "loading": "Preparing secure payment…",
+    "loadingDetail": "Loading the secure payment form.",
+    "updatingDelivery": "Updating delivery…",
+    "unsupportedCountry": "Delivery to this country is not available yet.",
+    "retryButton": "Retry",
+    "powered": "Secure payment powered by Stripe.",
+    "unavailable": "Checkout is not configured yet. Your selection remains saved.",
+    "invalid": "Please review your selection and try again.",
+    "inventory": "There is not enough stock for this selection.",
+    "retry": "Checkout could not be confirmed. Retry using the same selection.",
+    "finishNote": "Finish availability is subject to supplier confirmation.",
+    "cancel": "Cancel this checkout",
+    "canceled": "This checkout was canceled. Your selection is saved.",
+    "colors": { "black": "Black", "gold": "Gold", "silver": "Silver" }
+  },
+  "Confirmation": {
+    "paidTitle": "Thank you for your order.",
+    "paidBody": "Your payment has been confirmed. Keep your order reference for your records.",
+    "pendingTitle": "Your payment is being checked.",
+    "pendingBody": "Please wait for confirmation. Leaving this page does not cancel your payment.",
+    "failedTitle": "This checkout was not completed.",
+    "failedBody": "No order confirmation is available. You can return to your selection and try again.",
+    "invalidTitle": "We could not find this confirmation.",
+    "invalidBody": "Check the private link from your checkout, or contact our support team.",
+    "reference": "Order reference",
+    "back": "Back to offers"
+  },
+  "Legal": {
+    "pending": "To be confirmed before launch",
+    "draftNotice": "Merchant details and commercial policies below are incomplete. This information must be verified before sales begin; it is not a final legal policy.",
+    "factsTitle": "Merchant-specific information still required",
+    "sellerFactsTitle": "Seller information",
+    "sellerInfo": {
+      "withdrawal": "For eligible consumer purchases, you have {days} days from receipt of the goods to notify us of withdrawal, without giving a reason. You may be responsible for any diminished value caused by handling beyond what is needed to establish the goods' nature, characteristics and functioning. This right is separate from your rights if goods are defective or do not conform to the contract.",
+      "returnsEmail": "Before sending an item back, contact us at {email} for return instructions, then send it to the return address shown. We receive and check the return before processing a refund under the applicable rules. For a change-of-mind withdrawal, you bear the direct return-shipping cost where legally permitted; this does not automatically apply to defective or non-conforming goods. Prior contact does not restrict your statutory withdrawal right.",
+      "returnsEmailWhatsApp": "Before sending an item back, contact us at {email} or on WhatsApp for return instructions, then send it to the return address shown. We receive and check the return before processing a refund under the applicable rules. For a change-of-mind withdrawal, you bear the direct return-shipping cost where legally permitted; this does not automatically apply to defective or non-conforming goods. Prior contact does not restrict your statutory withdrawal right.",
+      "refunds": "For a valid withdrawal, amounts due, including the original standard delivery charge, are refunded without undue delay and no later than 14 days after we are informed of your decision. We may defer reimbursement until we receive the goods or evidence that you sent them back, whichever is earlier. We use the original payment method unless you expressly agree to another method at no extra cost to you. No instant refund or additional commercial money-back guarantee is promised.",
+      "perOrder": "per order",
+      "deliveryTime": "Estimated delivery within {min}–{max} business days for France, Belgium, Germany and Switzerland.",
+      "switzerland": "Delivery to Switzerland may involve import VAT, customs duties and carrier or customs processing charges under the applicable rules. Their amounts and who bears them still require confirmation before production; LUMIZA's shipping charge does not promise that taxes or duties are included."
+    },
+    "fields": {
+      "legalBusinessName": "Legal business name",
+      "registrationNumber": "Registration number",
+      "vatNumber": "VAT number",
+      "registeredAddress": "Registered address",
+      "contactEmail": "Contact email",
+      "publicationDirector": "Publication director",
+      "hostingProvider": "Hosting provider",
+      "supportEmail": "Customer support email",
+      "returnsAddress": "Return address",
+      "shipping": "Delivery countries and charges",
+      "withdrawal": "Withdrawal policy",
+      "returns": "Return procedure",
+      "refunds": "Refund policy",
+      "deliveryTimes": "Delivery-time commitment",
+      "swissImportAndCustoms": "Switzerland import, customs and tax policy",
+      "privacyRetention": "Data-retention periods"
+    },
+    "legal": {
+      "title": "Legal notice",
+      "introduction": "Information about the operator of this website. Merchant-specific details remain to be confirmed before launch.",
+      "sections": {
+        "publisher": {
+          "title": "Publisher",
+          "body": "LUMIZA is the brand shown on this website. The legal identity, registration and contact details of the seller have not yet been supplied."
+        },
+        "hosting": {
+          "title": "Hosting",
+          "body": "The hosting provider and its address must be published once the production hosting arrangement is confirmed."
+        },
+        "contact": {
+          "title": "Contact",
+          "body": "A verified customer contact channel must be provided before orders are accepted."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Privacy",
+      "introduction": "This page describes the data categories used by the current LUMIZA checkout and website. Retention periods and the controller's identity still need confirmation.",
+      "sections": {
+        "orders": {
+          "title": "Orders and delivery",
+          "body": "Checkout and order records contain the selected products, quantities, country, order reference and payment-related identifiers. Stripe may provide a customer's name and email after payment. Stripe collects delivery address information through its checkout interface; LUMIZA does not currently copy the full address into its order database."
+        },
+        "payment": {
+          "title": "Payment",
+          "body": "Card entry takes place in Stripe's embedded payment interface. LUMIZA stores a Stripe checkout session identifier and, when available, a payment-intent identifier, not full card numbers."
+        },
+        "technical": {
+          "title": "Technical data",
+          "body": "The cart is kept in local storage; a checkout-attempt identifier is kept in session storage. Theme and consent preferences may also be stored in this browser. Server and payment-provider logs may contain technical information needed for operation and security."
+        },
+        "sharing": {
+          "title": "Service providers and rights",
+          "body": "Supabase supports order data storage and Stripe processes payments. A verified privacy contact, retention schedule and procedure for privacy requests must be defined before production. No analytics or marketing tracker is currently enabled."
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms and conditions",
+      "introduction": "The structure below explains the current ordering flow. Undecided seller policies must be confirmed before these terms can govern real sales.",
+      "sections": {
+        "seller": {
+          "title": "Seller and products",
+          "body": "The seller's legal identity is pending. LUMIZA currently presents one lamp in Black, Gold and Silver selections with SOLO, DUO and PRO packs; final product specifications and finish availability require verification."
+        },
+        "prices": {
+          "title": "Prices and payment",
+          "body": "Prices are displayed in EUR. The server verifies the product price and shipping charge before creating a card checkout with Stripe. Tax treatment and production payment configuration remain to be decided."
+        },
+        "ordering": {
+          "title": "Ordering and confirmation",
+          "body": "The customer reviews the cart, selects a supported delivery country and enters payment and delivery details through Stripe. An order is confirmed only when payment is successfully recorded; a private confirmation page shows the order reference."
+        },
+        "delivery": {
+          "title": "Delivery",
+          "body": "Supported destinations and per-order charges are set out in the seller information below. Estimated delivery within {min}–{max} business days."
+        },
+        "afterSale": {
+          "title": "Withdrawal, returns, refunds and defects",
+          "body": "The withdrawal right, return procedure and refund rules are set out below. Rights concerning defective or non-conforming goods remain separate; no additional commercial guarantee is promised."
+        },
+        "disputes": {
+          "title": "Support and disputes",
+          "body": "The customer-service contact appears below. Applicable dispute-resolution information still needs to be completed before launch. No liability limitation has been adopted in this draft."
+        }
+      }
+    },
+    "shippingReturns": {
+      "title": "Shipping and returns",
+      "introduction": "Delivery destinations, charges, estimated times and return arrangements are shown below; Swiss import treatment still needs confirmation.",
+      "sections": {
+        "destinations": {
+          "title": "Destinations and charges",
+          "body": "Supported destinations and charges per order appear in the information below. The charge is not multiplied by packs, items or quantity."
+        },
+        "timing": {
+          "title": "Delivery times",
+          "body": "Estimated delivery within {min}–{max} business days for supported destinations. Handling of delays must be verified before production sales."
+        },
+        "returns": {
+          "title": "Returns and refunds",
+          "body": "The return address, withdrawal procedure and refund rules appear below. They are separate from rights concerning defective or non-conforming goods."
+        },
+        "switzerland": {
+          "title": "Switzerland",
+          "body": "LUMIZA's shipping charge does not determine import VAT, customs duties or potential processing charges. Who bears them must be confirmed before production; no duties-paid or taxes-included promise is made."
+        }
+      }
+    },
+    "cookies": {
+      "title": "Cookies and preferences",
+      "introduction": "You can manage optional analytics and marketing preferences at any time using the footer link.",
+      "sections": {
+        "necessary": {
+          "title": "Necessary technologies",
+          "body": "The cart, checkout-attempt identifier, theme preference and consent decision support the site's current functions. These do not require optional analytics or marketing consent."
+        },
+        "optional": {
+          "title": "Optional categories",
+          "body": "Analytics and marketing both start switched off. No analytics, Meta Pixel, Meta CAPI or other marketing script has been installed. Future optional scripts must check your choice before loading."
+        },
+        "control": {
+          "title": "Your control",
+          "body": "Use Cookie preferences in the footer to review or change your choice. Rejecting optional categories does not block checkout."
+        }
+      }
+    }
+  },
+  "Contact": {
+    "whatsapp": "Have a question? Chat with us on WhatsApp",
+    "message": "Hello LUMIZA, I have a question about your lamps."
+  },
+  "Consent": {
+    "title": "Your privacy choices",
+    "description": "Necessary storage keeps the cart and checkout working. Optional analytics and marketing are off unless you allow them.",
+    "acceptAll": "Accept all",
+    "rejectOptional": "Reject optional",
+    "customize": "Customize",
+    "preferences": "Cookie preferences",
+    "dialogTitle": "Cookie preferences",
+    "close": "Close preferences",
+    "save": "Save choices",
+    "necessary": "Necessary",
+    "necessaryDetail": "Always on for core site functions",
+    "analytics": "Analytics",
+    "marketing": "Marketing"
+  },
+  "Email": {
+    "subject": "Order confirmation",
+    "greeting": "Thank you for your LUMIZA order.",
+    "reference": "Order reference",
+    "supportPending": "Support contact details will be provided before launch."
+  }
+}

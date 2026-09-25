@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #fffcf6;
+  --foreground: #1c1c1a;
+  --surface: #f5f0e7;
+  --surface-elevated: #ffffff;
+  --muted-foreground: #605d56;
+  --border: #d9d2c7;
+  --primary: #ff7048;
+  --primary-foreground: #1c1c1a;
+  --accent: #dfff80;
+  --accent-foreground: #1c1c1a;
+  --offer-background: #171715;
+  --offer-surface: #262626;
+  --offer-border: #3d3d3a;
+  --offer-ink: #1c1c1a;
+  --offer-button: #ffffff;
+  --offer-button-hover: #f2eee7;
+  --visual-orb: rgba(255, 112, 72, 0.28);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #1c1c1a;
+  --foreground: #fffaf3;
+  --surface: #171715;
+  --surface-elevated: #262626;
+  --muted-foreground: #bdb7ad;
+  --border: #3b3a36;
+  --primary: #ff7048;
+  --primary-foreground: #1c1c1a;
+  --accent: #dfff80;
+  --accent-foreground: #1c1c1a;
+  --offer-background: #10100f;
+  --offer-surface: #262626;
+  --offer-border: #454541;
+  --offer-ink: #1c1c1a;
+  --offer-button: #ffffff;
+  --offer-button-hover: #f2eee7;
+  --visual-orb: rgba(255, 112, 72, 0.24);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-offer-background: var(--offer-background);
+  --color-offer-surface: var(--offer-surface);
+  --color-offer-border: var(--offer-border);
+  --color-offer-ink: var(--offer-ink);
+  --color-offer-button: var(--offer-button);
+  --color-offer-button-hover: var(--offer-button-hover);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-manrope);
+  --font-accent: var(--font-cormorant);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.nav-link {
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: color 160ms ease;
+}
+
+.nav-link:hover {
+  color: var(--foreground);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.hero-title {
+  font-size: clamp(3.25rem, 7vw, 6.35rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+}
+
+.hero-title em {
+  display: inline;
+  letter-spacing: -0.035em;
+}
+
+.ambient-orb {
+  position: absolute;
+  top: -14rem;
+  left: -15rem;
+  width: 42rem;
+  height: 42rem;
+  border-radius: 9999px;
+  background: var(--visual-orb);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.offers-section {
+  background: var(--offer-background);
+  color: white;
+}
+
+.gallery-arrow {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--surface-elevated) 90%, transparent);
+  color: var(--foreground);
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+}
+
+.gallery-arrow:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.color-swatch {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  border: 1px solid rgba(28, 28, 26, 0.28);
+  border-radius: 9999px;
+}
+
+.color-swatch-black {
+  background: #1c1c1a;
+}
+
+.color-swatch-gold {
+  background: #b58b45;
+}
+
+.color-swatch-silver {
+  background: #b9bab8;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-icon {
+  transition: transform 180ms ease;
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: clamp(3.1rem, 14vw, 4rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

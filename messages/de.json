@@ -1,0 +1,462 @@
+{
+  "Metadata": {
+    "title": "LUMIZA — Licht für sanftere Abende",
+    "description": "Entdecken Sie LUMIZA, eine elegante, kabellose und wiederaufladbare LED-Leuchte für Zuhause und professionelle Räume."
+  },
+  "Navigation": {
+    "homeLabel": "LUMIZA Startseite",
+    "primaryLabel": "Hauptnavigation",
+    "advantages": "Vorteile",
+    "offers": "Unsere Angebote",
+    "questions": "Fragen",
+    "cta": "Angebote ansehen",
+    "languageLabel": "Sprache auswählen",
+    "themeLabel": "Design auswählen",
+    "themes": {
+      "light": "Helles Design",
+      "dark": "Dunkles Design",
+      "system": "Systemeinstellung"
+    },
+    "languages": {
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch"
+    }
+  },
+  "Home": {
+    "eyebrow": "Kabelloses Licht · Moderner Auftritt",
+    "titleLead": "Licht, das jeden Abend",
+    "titleAccent": "wärmer macht.",
+    "cta": "Unsere Angebote entdecken",
+    "secondaryCta": "Leuchte ansehen",
+    "heroNote": "Drei geplante Ausführungen · Verfügbarkeit noch zu bestätigen",
+    "offers": {
+      "eyebrow": "Format auswählen",
+      "title": "Mehr Licht zum fairen Preis.",
+      "description": "Drei Formate bringen {productName} zu Ihnen nach Hause oder in Ihre Geschäftsräume.",
+      "lamp": "Leuchte",
+      "soloNote": "Eine Leuchte pro Paket",
+      "select": "Ausführung wählen",
+      "cart": {
+        "add": "Zur Auswahl hinzufügen",
+        "title": "Ihre Auswahl",
+        "empty": "Wählen Sie ein Paket und eine Ausführung aus.",
+        "checkout": "Bestellung prüfen",
+        "remove": "Entfernen",
+        "quantity": "Pakete",
+        "color": "Ausführung",
+        "subtotal": "Zwischensumme",
+        "max": "Höchstens 30 Leuchten pro Bestellung. Die Verfügbarkeit der Ausführungen ist noch nicht bestätigt.",
+        "colors": { "black": "Schwarz", "gold": "Gold", "silver": "Silber" }
+      },
+      "professional": "Angebot für Unternehmen",
+      "savings": "Sie sparen",
+      "packNote": "Das PRO-Paket enthält zehn Leuchten.",
+      "colorNote": "Die Verfügbarkeit der Ausführungen muss der Lieferant noch bestätigen.",
+      "pricingNote": "Preise in EUR. Versand innerhalb Frankreichs kostenlos; nach Belgien, Deutschland und in die Schweiz 10 € je Bestellung. Die steuerliche Konfiguration steht noch aus."
+    }
+  },
+  "Benefits": {
+    "eyebrow": "Kleine Leuchte, große Wirkung",
+    "title": "Für die Momente, die Sie begleiten.",
+    "cordless": {
+      "title": "Kabellos",
+      "description": "Ein Tischlicht, das sich frei platzieren lässt und während der Nutzung kein Kabel benötigt."
+    },
+    "rechargeable": {
+      "title": "Wiederaufladbar",
+      "description": "Die Leuchte wird per USB geladen und begleitet Ihre Räume durch den Alltag."
+    },
+    "touch": {
+      "title": "Touch-Bedienung",
+      "description": "Eine integrierte Touch-Steuerung ermöglicht eine einfache, direkte Bedienung."
+    },
+    "portable": {
+      "title": "Leicht umzustellen",
+      "description": "Ihre moderne Silhouette wechselt mühelos von einem Tisch zum nächsten."
+    }
+  },
+  "Product": {
+    "eyebrow": "LUMIZA entdecken",
+    "title": "Ein Lichtobjekt aus jedem Blickwinkel.",
+    "description": "Entdecken Sie die Silhouette der LUMIZA auf Produktfotos in Schwarz, Gold und Silber.",
+    "gallery": {
+      "label": "LUMIZA Produktgalerie",
+      "previous": "Vorheriges Bild",
+      "next": "Nächstes Bild",
+      "expand": "Bild vergrößern",
+      "close": "Vergrößertes Bild schließen"
+    },
+    "colors": {
+      "legend": "Geplante Ausführung",
+      "black": "Schwarz",
+      "gold": "Gold",
+      "silver": "Silber",
+      "selected": "Auswahl",
+      "provisional": "Schwarz, Gold und Silber stehen noch unter dem Vorbehalt der Lieferantenbestätigung.",
+      "missingImage": "Das Bild dieser Ausführung ist derzeit nicht verfügbar."
+    },
+    "facts": {
+      "power": "Angegebene Leistung",
+      "temperature": "Angegebene Temperatur",
+      "control": "Bedienung",
+      "touch": "Touch",
+      "charge": "Aufladen"
+    }
+  },
+  "UseCases": {
+    "eyebrow": "Ein Licht, viele Atmosphären",
+    "title": "Zu Hause und in gastlichen Räumen.",
+    "home": {
+      "title": "Zu Hause",
+      "description": "Elegantes Licht zum Essen, Lesen oder für eine wärmere Atmosphäre."
+    },
+    "restaurant": {
+      "title": "Restaurants und Bars",
+      "description": "Eine kabellose Tischleuchte für eine warme Atmosphäre, ohne den Tisch zu überladen."
+    },
+    "hospitality": {
+      "title": "Hotels und Gastlichkeit",
+      "description": "Eine moderne Silhouette für Zimmer, Lounges und einladende Empfangsbereiche."
+    },
+    "terrace": {
+      "title": "Terrassen & Außenbereiche",
+      "description": "Schaffen Sie eine warme Atmosphäre für Ihre Gäste – drinnen oder bei geeigneten Bedingungen auf der Terrasse."
+    },
+    "gift": {
+      "title": "Eine elegante Geschenkidee",
+      "description": "Ein stilvolles und praktisches Geschenk zu Weihnachten und anderen besonderen Anlässen."
+    },
+    "finishes": {
+      "title": "Drei elegante Ausführungen",
+      "description": "Wählen Sie die passende Ausführung für Ihren Raum: Gold, Silber oder Schwarz."
+    },
+    "terraceNote": "Eine Nutzung auf der Terrasse ist unter geeigneten Bedingungen denkbar; eine Wasserbeständigkeit ist derzeit nicht bestätigt."
+  },
+  "Faq": {
+    "eyebrow": "Das Wesentliche, klar erklärt",
+    "title": "Häufig gestellte Fragen",
+    "description": "Antworten auf häufige Fragen rund um LUMIZA.",
+    "cordless": {
+      "question": "Funktioniert die Leuchte kabellos?",
+      "answer": "Ja. LUMIZA ist für den kabellosen Betrieb konzipiert und lässt sich leicht umstellen."
+    },
+    "recharge": {
+      "question": "Wie wird die Leuchte aufgeladen?",
+      "answer": "Das Aufladen ist per USB vorgesehen. Akkulaufzeit und Ladezeit müssen noch bestätigt werden."
+    },
+    "colors": {
+      "question": "Welche Farben sind erhältlich?",
+      "answer": "Schwarz, Gold und Silber sind geplant, vorbehaltlich der endgültigen Bestätigung durch den Lieferanten."
+    },
+    "multiple": {
+      "question": "Kann ich mehrere Leuchten bestellen?",
+      "answer": "Wählen Sie SOLO für eine, DUO für zwei oder PRO für zehn Leuchten und passen Sie anschließend die Anzahl der Pakete an."
+    },
+    "shipping": {
+      "question": "Liefern Sie außerhalb Frankreichs?",
+      "answer": "Der Versand ist nach Frankreich, Belgien, Deutschland und in die Schweiz möglich. Die Versandkosten werden an der Kasse angezeigt. Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen."
+    },
+    "payment": {
+      "question": "Wie funktioniert die Zahlung?",
+      "answer": "Kartenzahlungen werden in der sicheren Stripe-Oberfläche verarbeitet. LUMIZA speichert Ihre vollständige Kartennummer nicht."
+    }
+  },
+  "FinalCta": {
+    "eyebrow": "Ihr Raum verdient sein Licht",
+    "title": "Wählen Sie das Format, das zu Ihnen passt.",
+    "cta": "Angebote ansehen"
+  },
+  "Footer": {
+    "brandNote": "Eine moderne, kabellose und wiederaufladbare LED-Leuchte für europäische Wohn- und Geschäftsräume.",
+    "navigationLabel": "Navigation in der Fußzeile",
+    "navigation": "Navigation",
+    "advantages": "Vorteile",
+    "product": "Die Leuchte",
+    "offers": "Unsere Angebote",
+    "questions": "Fragen",
+    "information": "Informationen",
+    "legal": "Impressum / Rechtliche Hinweise",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "shippingReturns": "Versand & Rückgabe",
+    "cookies": "Cookies",
+    "cookiePreferences": "Cookie-Einstellungen",
+    "contactPending": "Kontaktdaten werden vor dem Start veröffentlicht.",
+    "socialLabel": "Soziale Netzwerke",
+    "facebook": "LUMIZA auf Facebook",
+    "instagram": "LUMIZA auf Instagram",
+    "securePayment": "Sichere Zahlung",
+    "cardPayment": "Kartenzahlung"
+  },
+  "Purchase": {
+    "brand": "LUMIZA",
+    "name": "Wiederaufladbare kabellose LED-Leuchte",
+    "description": "Eine per USB aufladbare Tischleuchte mit Touch-Bedienung und Licht mit 3.500 K.",
+    "color": "Ausführung",
+    "selected": "Ausgewählt",
+    "quantity": "Anzahl der Pakete",
+    "increase": "Paket hinzufügen",
+    "decrease": "Paket entfernen",
+    "finishIncrease": "Leuchte hinzufügen in",
+    "finishDecrease": "Leuchte entfernen in",
+    "add": "In den Warenkorb",
+    "max": "Maximal 30 Leuchten pro Bestellung oder 10 Pakete pro Position.",
+    "unavailable": "Die Kaufoptionen sind vorübergehend nicht verfügbar.",
+    "compose": "Stellen Sie Ihr Paket mit",
+    "composeSuffix": "Leuchten zusammen",
+    "selectedCount": "ausgewählt",
+    "remainingSingle": "Leuchte noch auswählen",
+    "remainingPlural": "Leuchten noch auswählen",
+    "colors": { "black": "Schwarz", "gold": "Gold", "silver": "Silber" },
+    "packs": {
+      "legend": "Paket auswählen",
+      "lamp": "Leuchte",
+      "lamps": "Leuchten",
+      "save": "Sparen Sie",
+      "professional": "Angebot für Unternehmen"
+    }
+  },
+  "Cart": {
+    "title": "Ihr Warenkorb",
+    "open": "Warenkorb öffnen",
+    "close": "Warenkorb schließen",
+    "empty": "Ihr Warenkorb ist leer.",
+    "continue": "Weiter einkaufen",
+    "checkout": "Zur Kasse",
+    "remove": "Entfernen",
+    "subtotal": "Zwischensumme",
+    "shipping": "Versand",
+    "nextStep": "Wird im nächsten Schritt berechnet",
+    "max": "Maximal 30 Leuchten pro Bestellung oder 10 Pakete pro Position.",
+    "increase": "Menge erhöhen",
+    "decrease": "Menge verringern",
+    "lamp": "Leuchte",
+    "lamps": "Leuchten",
+    "perPack": "pro Paket",
+    "unavailable": "Paket nicht verfügbar",
+    "composition": "Pro Paket:",
+    "packsLabel": "Pakete",
+    "colors": { "black": "Schwarz", "gold": "Gold", "silver": "Silber" }
+  },
+  "Checkout": {
+    "eyebrow": "Sichere Bestellung",
+    "title": "Prüfen Sie Ihre Bestellung.",
+    "description": "Prüfen Sie Ihre Auswahl und schließen Sie die Zahlung sicher ab.",
+    "empty": "Ihre Auswahl ist leer.",
+    "back": "Zurück zu den Angeboten",
+    "country": "Lieferland",
+    "countries": {
+      "FR": "Frankreich",
+      "BE": "Belgien",
+      "DE": "Deutschland",
+      "CH": "Schweiz"
+    },
+    "quantity": "Pakete",
+    "remove": "Entfernen",
+    "subtotal": "Zwischensumme",
+    "shipping": "Versand",
+    "total": "Gesamt",
+    "lamp": "Leuchte",
+    "lamps": "Leuchten",
+    "perPack": "pro Paket",
+    "represented": "insgesamt",
+    "composition": "Pro Paket:",
+    "tax": "Die steuerliche Konfiguration wird vor echten Verkäufen bestätigt.",
+    "delivery": "Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen.",
+    "loading": "Sichere Zahlung wird vorbereitet…",
+    "loadingDetail": "Das sichere Zahlungsformular wird geladen.",
+    "updatingDelivery": "Versand wird aktualisiert…",
+    "unsupportedCountry": "Eine Lieferung in dieses Land ist derzeit nicht möglich.",
+    "retryButton": "Erneut versuchen",
+    "powered": "Sichere Zahlung mit Stripe.",
+    "unavailable": "Die Zahlung ist noch nicht eingerichtet. Ihre Auswahl bleibt gespeichert.",
+    "invalid": "Bitte prüfen Sie Ihre Auswahl und versuchen Sie es erneut.",
+    "inventory": "Für diese Auswahl ist nicht genügend Bestand vorhanden.",
+    "retry": "Die Bestellung konnte nicht bestätigt werden. Versuchen Sie es mit derselben Auswahl erneut.",
+    "finishNote": "Die Verfügbarkeit der Ausführungen muss der Lieferant noch bestätigen.",
+    "cancel": "Diesen Bezahlvorgang abbrechen",
+    "canceled": "Dieser Bezahlvorgang wurde abgebrochen. Ihre Auswahl bleibt gespeichert.",
+    "colors": { "black": "Schwarz", "gold": "Gold", "silver": "Silber" }
+  },
+  "Confirmation": {
+    "paidTitle": "Vielen Dank für Ihre Bestellung.",
+    "paidBody": "Ihre Zahlung wurde bestätigt. Bewahren Sie Ihre Bestellreferenz auf.",
+    "pendingTitle": "Ihre Zahlung wird geprüft.",
+    "pendingBody": "Bitte warten Sie auf die Bestätigung. Das Verlassen dieser Seite storniert die Zahlung nicht.",
+    "failedTitle": "Diese Bestellung wurde nicht abgeschlossen.",
+    "failedBody": "Eine Bestätigung liegt nicht vor. Sie können zu Ihrer Auswahl zurückkehren und es erneut versuchen.",
+    "invalidTitle": "Bestätigung nicht gefunden.",
+    "invalidBody": "Prüfen Sie den privaten Link aus dem Bezahlvorgang oder wenden Sie sich an unseren Kundenservice.",
+    "reference": "Bestellreferenz",
+    "back": "Zurück zu den Angeboten"
+  },
+  "Legal": {
+    "pending": "Vor dem Start zu bestätigen",
+    "draftNotice": "Die folgenden Händlerangaben und Geschäftsbedingungen sind unvollständig. Sie müssen vor dem Verkauf geprüft werden; dies ist keine endgültige rechtliche Regelung.",
+    "factsTitle": "Noch erforderliche Angaben zum Händler",
+    "sellerFactsTitle": "Angaben zum Verkäufer",
+    "sellerInfo": {
+      "withdrawal": "Bei berechtigten Verbraucherkäufen können Sie den Widerruf innerhalb von {days} Tagen ab Erhalt der Ware ohne Angabe von Gründen erklären. Für einen Wertverlust können Sie verantwortlich sein, wenn der Umgang mit der Ware über die Prüfung ihrer Beschaffenheit, Eigenschaften und Funktionsweise hinausgeht. Dieses Recht besteht unabhängig von Ihren Rechten bei mangelhafter oder nicht vertragsgemäßer Ware.",
+      "returnsEmail": "Kontaktieren Sie uns vor der Rücksendung unter {email}, um Rücksendehinweise zu erhalten, und senden Sie die Ware anschließend an die angegebene Rücksendeadresse. Nach Eingang und Prüfung bearbeiten wir die Erstattung nach den geltenden Regeln. Bei einem Widerruf wegen Meinungsänderung tragen Sie die unmittelbaren Rücksendekosten, soweit gesetzlich zulässig; dies gilt nicht automatisch für mangelhafte oder nicht vertragsgemäße Ware. Die vorherige Kontaktaufnahme schränkt Ihr gesetzliches Widerrufsrecht nicht ein.",
+      "returnsEmailWhatsApp": "Kontaktieren Sie uns vor der Rücksendung unter {email} oder per WhatsApp, um Rücksendehinweise zu erhalten, und senden Sie die Ware anschließend an die angegebene Rücksendeadresse. Nach Eingang und Prüfung bearbeiten wir die Erstattung nach den geltenden Regeln. Bei einem Widerruf wegen Meinungsänderung tragen Sie die unmittelbaren Rücksendekosten, soweit gesetzlich zulässig; dies gilt nicht automatisch für mangelhafte oder nicht vertragsgemäße Ware. Die vorherige Kontaktaufnahme schränkt Ihr gesetzliches Widerrufsrecht nicht ein.",
+      "refunds": "Bei einem wirksamen Widerruf erstatten wir die geschuldeten Beträge einschließlich der ursprünglichen Standardlieferkosten unverzüglich und spätestens 14 Tage nach Ihrer Mitteilung. Wir können die Erstattung bis zum Erhalt der Ware oder eines Versandnachweises zurückhalten, je nachdem, was zuerst eintritt. Die Erstattung erfolgt über das ursprüngliche Zahlungsmittel, sofern Sie nicht ausdrücklich einem anderen, für Sie kostenfreien Verfahren zustimmen. Eine sofortige Erstattung oder zusätzliche freiwillige Geld-zurück-Garantie wird nicht zugesagt.",
+      "perOrder": "pro Bestellung",
+      "deliveryTime": "Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen nach Frankreich, Belgien, Deutschland und in die Schweiz.",
+      "switzerland": "Bei Lieferungen in die Schweiz können je nach geltenden Regeln Einfuhrumsatzsteuer, Zölle sowie Bearbeitungsgebühren von Transporteuren oder Zollstellen anfallen. Höhe und Kostentragung müssen vor dem Produktionsstart noch geklärt werden; die LUMIZA-Versandkosten bedeuten nicht, dass Steuern oder Zölle enthalten sind."
+    },
+    "fields": {
+      "legalBusinessName": "Rechtlicher Firmenname",
+      "registrationNumber": "Registrierungsnummer",
+      "vatNumber": "Umsatzsteuer-Identifikationsnummer",
+      "registeredAddress": "Geschäftsanschrift",
+      "contactEmail": "Kontakt-E-Mail",
+      "publicationDirector": "Verantwortliche Person",
+      "hostingProvider": "Hosting-Anbieter",
+      "supportEmail": "Kundenservice-E-Mail",
+      "returnsAddress": "Rücksendeadresse",
+      "shipping": "Lieferländer und Versandkosten",
+      "withdrawal": "Widerrufsregelung",
+      "returns": "Rückgabeverfahren",
+      "refunds": "Erstattungsregelung",
+      "deliveryTimes": "Lieferzeitangabe",
+      "swissImportAndCustoms": "Einfuhr, Zoll und Steuern in der Schweiz",
+      "privacyRetention": "Aufbewahrungsfristen"
+    },
+    "legal": {
+      "title": "Impressum / Rechtliche Hinweise",
+      "introduction": "Angaben zum Betreiber dieser Website. Händlerspezifische Daten müssen vor dem Start bestätigt werden.",
+      "sections": {
+        "publisher": {
+          "title": "Anbieter",
+          "body": "LUMIZA ist die auf dieser Website gezeigte Marke. Rechtliche Identität, Registrierung und Kontaktdaten des Verkäufers wurden noch nicht bereitgestellt."
+        },
+        "hosting": {
+          "title": "Hosting",
+          "body": "Hosting-Anbieter und Anschrift werden angegeben, sobald die Produktionsumgebung bestätigt ist."
+        },
+        "contact": {
+          "title": "Kontakt",
+          "body": "Vor der Annahme von Bestellungen muss ein verifizierter Kontakt zum Kundenservice bereitstehen."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Datenschutz",
+      "introduction": "Diese Seite beschreibt die Datenkategorien des derzeitigen LUMIZA-Shops. Aufbewahrungsfristen und die Identität des Verantwortlichen müssen noch bestätigt werden.",
+      "sections": {
+        "orders": {
+          "title": "Bestellungen und Lieferung",
+          "body": "Bestelldaten enthalten ausgewählte Produkte, Mengen, Land, Bestellreferenz und Zahlungskennungen. Stripe kann nach der Zahlung Namen und E-Mail des Kunden übermitteln. Die Lieferadresse wird in der Stripe-Kasse erfasst; LUMIZA kopiert die vollständige Adresse derzeit nicht in seine Bestelldatenbank."
+        },
+        "payment": {
+          "title": "Zahlung",
+          "body": "Kartendaten werden in der eingebetteten Stripe-Oberfläche eingegeben. LUMIZA speichert die Stripe-Checkout-Session-ID und gegebenenfalls die Payment-Intent-ID, nicht aber vollständige Kartennummern."
+        },
+        "technical": {
+          "title": "Technische Daten",
+          "body": "Der Warenkorb liegt im lokalen Speicher; eine Kennung des Bestellversuchs im Sitzungsspeicher. Design- und Einwilligungspräferenzen können ebenfalls im Browser gespeichert werden. Server- und Zahlungsanbieterprotokolle können technische Betriebs- und Sicherheitsdaten enthalten."
+        },
+        "sharing": {
+          "title": "Dienstleister und Rechte",
+          "body": "Supabase unterstützt die Speicherung von Bestelldaten und Stripe verarbeitet Zahlungen. Ein verifizierter Datenschutzkontakt, Aufbewahrungsfristen und ein Verfahren für Anfragen müssen vor Produktionsbeginn festgelegt werden. Analyse- oder Werbetracking ist derzeit nicht aktiv."
+        }
+      }
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "introduction": "Diese Struktur erläutert den aktuellen Bestellablauf. Offene Händlerregeln müssen vor echten Verkäufen bestätigt werden.",
+      "sections": {
+        "seller": {
+          "title": "Verkäufer und Produkte",
+          "body": "Die rechtliche Identität des Verkäufers steht noch aus. LUMIZA zeigt derzeit eine Leuchte in Schwarz, Gold und Silber mit SOLO-, DUO- und PRO-Paketen; endgültige Produkteigenschaften und Verfügbarkeit müssen geprüft werden."
+        },
+        "prices": {
+          "title": "Preise und Zahlung",
+          "body": "Preise werden in EUR angezeigt. Der Server prüft Produktpreis und Versandkosten vor Erstellung einer Kartenzahlung mit Stripe. Steuerbehandlung und produktive Zahlungskonfiguration sind noch festzulegen."
+        },
+        "ordering": {
+          "title": "Bestellung und Bestätigung",
+          "body": "Kunden prüfen den Warenkorb, wählen ein unterstütztes Lieferland und geben Zahlungs- und Lieferangaben bei Stripe ein. Eine Bestellung gilt erst nach verbuchter Zahlung als bestätigt; eine private Seite zeigt die Bestellreferenz."
+        },
+        "delivery": {
+          "title": "Lieferung",
+          "body": "Lieferländer und Versandkosten pro Bestellung stehen in den Verkäuferangaben unten. Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen."
+        },
+        "afterSale": {
+          "title": "Widerruf, Rückgabe, Erstattung und Mängel",
+          "body": "Widerrufsrecht, Rücksendeverfahren und Erstattung sind unten beschrieben. Rechte bei mangelhafter oder nicht vertragsgemäßer Ware bleiben davon unberührt; eine zusätzliche freiwillige Garantie wird nicht zugesagt."
+        },
+        "disputes": {
+          "title": "Service und Streitfälle",
+          "body": "Der Kontakt zum Kundenservice steht unten. Informationen zur anwendbaren Streitbeilegung müssen vor dem Start noch ergänzt werden. Dieser Entwurf enthält keine Haftungsbegrenzung."
+        }
+      }
+    },
+    "shippingReturns": {
+      "title": "Versand und Rückgabe",
+      "introduction": "Lieferländer, Versandkosten, voraussichtliche Lieferzeiten und Rücksenderegeln stehen unten; Schweizer Einfuhrfragen sind noch zu klären.",
+      "sections": {
+        "destinations": {
+          "title": "Länder und Versandkosten",
+          "body": "Lieferländer und Versandkosten pro Bestellung stehen in den Angaben unten. Die Kosten steigen nicht mit Paketen, Artikeln oder Menge."
+        },
+        "timing": {
+          "title": "Lieferzeiten",
+          "body": "Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen in die unterstützten Länder. Regelungen für Verzögerungen müssen vor produktiven Verkäufen geprüft werden."
+        },
+        "returns": {
+          "title": "Rückgaben und Erstattungen",
+          "body": "Rücksendeadresse, Widerrufsverfahren und Erstattungsregeln stehen unten. Rechte bei mangelhafter oder nicht vertragsgemäßer Ware bleiben davon unberührt."
+        },
+        "switzerland": {
+          "title": "Schweiz",
+          "body": "Die LUMIZA-Versandkosten bestimmen weder Einfuhrumsatzsteuer noch Zölle oder mögliche Bearbeitungsgebühren. Die Kostentragung muss vor dem Produktionsstart geklärt werden; eine verzollte oder steuerinklusive Lieferung wird nicht zugesagt."
+        }
+      }
+    },
+    "cookies": {
+      "title": "Cookies und Präferenzen",
+      "introduction": "Optionale Analyse- und Marketingpräferenzen lassen sich jederzeit über den Footer verwalten.",
+      "sections": {
+        "necessary": {
+          "title": "Notwendige Technologien",
+          "body": "Warenkorb, Bestellversuchskennung, Designpräferenz und Einwilligungsentscheidung unterstützen aktuelle Websitefunktionen. Dafür ist keine optionale Analyse- oder Marketingeinwilligung nötig."
+        },
+        "optional": {
+          "title": "Optionale Kategorien",
+          "body": "Analyse und Marketing sind standardmäßig ausgeschaltet. Google Analytics, Meta Pixel, Meta CAPI und andere Marketingskripte sind nicht installiert. Zukünftige optionale Skripte müssen die Entscheidung vor dem Laden prüfen."
+        },
+        "control": {
+          "title": "Ihre Wahl",
+          "body": "Über Cookie-Einstellungen im Footer können Sie Ihre Entscheidung ändern. Die Ablehnung optionaler Kategorien blockiert die Kasse nicht."
+        }
+      }
+    }
+  },
+  "Contact": {
+    "whatsapp": "Eine Frage? Schreiben Sie uns auf WhatsApp",
+    "message": "Hallo LUMIZA, ich habe eine Frage zu Ihren Lampen."
+  },
+  "Consent": {
+    "title": "Ihre Datenschutzauswahl",
+    "description": "Notwendiger Speicher hält Warenkorb und Kasse funktionsfähig. Analyse und Marketing bleiben ohne Ihre Zustimmung ausgeschaltet.",
+    "acceptAll": "Alle akzeptieren",
+    "rejectOptional": "Optionales ablehnen",
+    "customize": "Anpassen",
+    "preferences": "Cookie-Einstellungen",
+    "dialogTitle": "Cookie-Einstellungen",
+    "close": "Einstellungen schließen",
+    "save": "Auswahl speichern",
+    "necessary": "Notwendig",
+    "necessaryDetail": "Für Kernfunktionen immer aktiv",
+    "analytics": "Analyse",
+    "marketing": "Marketing"
+  },
+  "Email": {
+    "subject": "Bestellbestätigung",
+    "greeting": "Vielen Dank für Ihre LUMIZA-Bestellung.",
+    "reference": "Bestellreferenz",
+    "supportPending": "Kontaktdaten des Supports werden vor dem Start bereitgestellt."
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "Metadata": {
+    "title": "LUMIZA — La lumière qui adoucit vos soirées",
+    "description": "Découvrez LUMIZA, une lampe LED élégante, rechargeable et sans fil, pensée pour la maison et les espaces professionnels."
+  },
+  "Navigation": {
+    "homeLabel": "Accueil LUMIZA",
+    "primaryLabel": "Navigation principale",
+    "advantages": "Avantages",
+    "offers": "Nos offres",
+    "questions": "Questions",
+    "cta": "Voir les offres",
+    "languageLabel": "Choisir la langue",
+    "themeLabel": "Choisir le thème",
+    "themes": {
+      "light": "Thème clair",
+      "dark": "Thème sombre",
+      "system": "Thème du système"
+    },
+    "languages": {
+      "fr": "Français",
+      "en": "English",
+      "de": "Deutsch"
+    }
+  },
+  "Home": {
+    "eyebrow": "Éclairage sans fil · Allure contemporaine",
+    "titleLead": "La lumière qui rend chaque soir",
+    "titleAccent": "plus doux.",
+    "cta": "Découvrir nos offres",
+    "secondaryCta": "Voir la lampe",
+    "heroNote": "Trois finitions envisagées · disponibilité à confirmer",
+    "offers": {
+      "eyebrow": "Choisissez votre format",
+      "title": "Plus de lumière, au juste prix.",
+      "description": "Trois formats pour inviter {productName} chez vous ou dans vos espaces professionnels.",
+      "lamp": "lampe",
+      "soloNote": "Une lampe par pack",
+      "select": "Choisir une finition",
+      "cart": {
+        "add": "Ajouter à ma sélection",
+        "title": "Votre sélection",
+        "empty": "Choisissez un pack et une finition pour commencer.",
+        "checkout": "Vérifier la commande",
+        "remove": "Retirer",
+        "quantity": "Packs",
+        "color": "Finition",
+        "subtotal": "Sous-total",
+        "max": "Maximum de 30 lampes physiques par commande. La disponibilité des finitions reste à confirmer.",
+        "colors": { "black": "Noir", "gold": "Doré", "silver": "Argenté" }
+      },
+      "professional": "Offre professionnelle",
+      "savings": "Économisez",
+      "packNote": "Le pack PRO contient dix lampes.",
+      "colorNote": "La disponibilité des finitions reste soumise à confirmation du fournisseur.",
+      "pricingNote": "Prix en EUR. Livraison gratuite en France ; 10 € par commande vers la Belgique, l’Allemagne et la Suisse. Configuration fiscale à finaliser."
+    }
+  },
+  "Benefits": {
+    "eyebrow": "Petite lampe, grand effet",
+    "title": "Pensée pour suivre vos moments.",
+    "cordless": {
+      "title": "Sans fil",
+      "description": "Une lumière de table qui se place librement, sans câble pendant son utilisation."
+    },
+    "rechargeable": {
+      "title": "Rechargeable",
+      "description": "La lampe se recharge par USB pour accompagner vos espaces au quotidien."
+    },
+    "touch": {
+      "title": "Commande tactile",
+      "description": "Un contrôle tactile intégré pour une interaction simple et immédiate."
+    },
+    "portable": {
+      "title": "Facile à déplacer",
+      "description": "Sa silhouette contemporaine passe naturellement d’une table à l’autre."
+    }
+  },
+  "Product": {
+    "eyebrow": "Découvrez LUMIZA",
+    "title": "Un objet lumineux, sous tous les angles.",
+    "description": "Découvrez la silhouette de LUMIZA en noir, doré et argenté grâce aux photographies du produit.",
+    "gallery": {
+      "label": "Galerie produit LUMIZA",
+      "previous": "Image précédente",
+      "next": "Image suivante",
+      "expand": "Agrandir l’image",
+      "close": "Fermer l’image agrandie"
+    },
+    "colors": {
+      "legend": "Finition envisagée",
+      "black": "Noir",
+      "gold": "Doré",
+      "silver": "Argenté",
+      "selected": "Sélection",
+      "provisional": "Les finitions noir, doré et argenté restent soumises à confirmation fournisseur.",
+      "missingImage": "Le visuel de cette finition est indisponible pour le moment."
+    },
+    "facts": {
+      "power": "Puissance annoncée",
+      "temperature": "Température annoncée",
+      "control": "Commande",
+      "touch": "Tactile",
+      "charge": "Recharge"
+    }
+  },
+  "UseCases": {
+    "eyebrow": "Une lumière, plusieurs atmosphères",
+    "title": "Chez vous comme dans vos espaces d’accueil.",
+    "home": {
+      "title": "À la maison",
+      "description": "Une lumière élégante pour dîner, lire ou simplement créer une ambiance plus chaleureuse."
+    },
+    "restaurant": {
+      "title": "Restaurants & bars",
+      "description": "Une lampe de table sans fil pensée pour créer une atmosphère chaleureuse sans encombrer la table."
+    },
+    "hospitality": {
+      "title": "Hôtels & hospitalité",
+      "description": "Une silhouette contemporaine pour les chambres, lounges et espaces d’accueil."
+    },
+    "terrace": {
+      "title": "Terrasses & espaces extérieurs",
+      "description": "Créez une ambiance chaleureuse pour vos invités, en intérieur comme sur une terrasse lorsque les conditions sont adaptées."
+    },
+    "gift": {
+      "title": "Une idée cadeau élégante",
+      "description": "Un objet design et pratique à offrir à Noël ou pour les occasions qui comptent."
+    },
+    "finishes": {
+      "title": "Trois finitions élégantes",
+      "description": "Choisissez la finition qui correspond à votre univers : or, argent ou noir."
+    },
+    "terraceNote": "Un usage en terrasse peut être envisagé dans des conditions adaptées ; aucune résistance à l’eau n’est confirmée à ce stade."
+  },
+  "Faq": {
+    "eyebrow": "L’essentiel, en toute clarté",
+    "title": "Questions fréquentes",
+    "description": "Retrouvez les réponses aux questions les plus fréquentes sur LUMIZA.",
+    "cordless": {
+      "question": "La lampe fonctionne-t-elle sans fil ?",
+      "answer": "Oui. LUMIZA est conçue pour fonctionner sans câble pendant son utilisation et être déplacée facilement."
+    },
+    "recharge": {
+      "question": "Comment la lampe se recharge-t-elle ?",
+      "answer": "La recharge est prévue par USB. L’autonomie et le temps de recharge restent à confirmer."
+    },
+    "colors": {
+      "question": "Quelles couleurs sont disponibles ?",
+      "answer": "Les finitions noir, doré et argenté sont envisagées, sous réserve de confirmation finale du fournisseur."
+    },
+    "multiple": {
+      "question": "Puis-je commander plusieurs lampes ?",
+      "answer": "Choisissez SOLO pour une lampe, DUO pour deux ou PRO pour dix, puis ajustez le nombre de packs dans votre sélection."
+    },
+    "shipping": {
+      "question": "Livrez-vous hors de France ?",
+      "answer": "La livraison est proposée en France, en Belgique, en Allemagne et en Suisse. Les frais sont indiqués lors de la commande. Livraison estimée sous {min} à {max} jours ouvrés."
+    },
+    "payment": {
+      "question": "Comment fonctionne le paiement ?",
+      "answer": "Le paiement par carte est traité dans l’interface sécurisée de Stripe. LUMIZA ne conserve pas votre numéro de carte complet."
+    }
+  },
+  "FinalCta": {
+    "eyebrow": "Votre espace mérite sa lumière",
+    "title": "Choisissez le format qui vous ressemble.",
+    "cta": "Voir les offres"
+  },
+  "Footer": {
+    "brandNote": "Une lampe LED contemporaine, rechargeable et sans fil, imaginée pour les intérieurs et les professionnels en Europe.",
+    "navigationLabel": "Navigation du pied de page",
+    "navigation": "Navigation",
+    "advantages": "Avantages",
+    "product": "La lampe",
+    "offers": "Nos offres",
+    "questions": "Questions",
+    "information": "Informations",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "terms": "CGV",
+    "shippingReturns": "Livraison et retours",
+    "cookies": "Cookies",
+    "cookiePreferences": "Préférences des cookies",
+    "contactPending": "Coordonnées de contact à publier avant le lancement.",
+    "socialLabel": "Réseaux sociaux",
+    "facebook": "Facebook LUMIZA",
+    "instagram": "Instagram LUMIZA",
+    "securePayment": "Paiement sécurisé",
+    "cardPayment": "Carte bancaire"
+  },
+  "Purchase": {
+    "brand": "LUMIZA",
+    "name": "Lampe LED sans fil rechargeable",
+    "description": "Une lampe de table rechargeable par USB, avec commande tactile et lumière de 3 500 K.",
+    "color": "Finition",
+    "selected": "Sélectionnée",
+    "quantity": "Nombre de packs",
+    "increase": "Ajouter un pack",
+    "decrease": "Retirer un pack",
+    "finishIncrease": "Ajouter une lampe en finition",
+    "finishDecrease": "Retirer une lampe en finition",
+    "add": "Ajouter au panier",
+    "max": "Maximum de 30 lampes par commande ou 10 packs par ligne.",
+    "unavailable": "Les options d’achat sont momentanément indisponibles.",
+    "compose": "Composez votre pack de",
+    "composeSuffix": "",
+    "selectedCount": "sélectionnées",
+    "remainingSingle": "lampe à choisir",
+    "remainingPlural": "lampes à choisir",
+    "colors": { "black": "Noir", "gold": "Or", "silver": "Argent" },
+    "packs": {
+      "legend": "Choisir un pack",
+      "lamp": "lampe",
+      "lamps": "lampes",
+      "save": "Économisez",
+      "professional": "Offre professionnelle"
+    }
+  },
+  "Cart": {
+    "title": "Votre panier",
+    "open": "Ouvrir le panier",
+    "close": "Fermer le panier",
+    "empty": "Votre panier est vide.",
+    "continue": "Continuer les achats",
+    "checkout": "Passer au paiement",
+    "remove": "Retirer",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "nextStep": "Calculée à l’étape suivante",
+    "max": "Maximum de 30 lampes par commande ou 10 packs par ligne.",
+    "increase": "Augmenter la quantité",
+    "decrease": "Diminuer la quantité",
+    "lamp": "lampe",
+    "lamps": "lampes",
+    "perPack": "par pack",
+    "unavailable": "Pack indisponible",
+    "composition": "Par pack :",
+    "packsLabel": "packs",
+    "colors": { "black": "Noir", "gold": "Or", "silver": "Argent" }
+  },
+  "Checkout": {
+    "eyebrow": "Commande sécurisée",
+    "title": "Vérifiez votre commande.",
+    "description": "Vérifiez votre sélection et finalisez votre paiement en toute sécurité.",
+    "empty": "Votre sélection est vide.",
+    "back": "Retour aux offres",
+    "country": "Pays de livraison",
+    "countries": {
+      "FR": "France",
+      "BE": "Belgique",
+      "DE": "Allemagne",
+      "CH": "Suisse"
+    },
+    "quantity": "Packs",
+    "remove": "Retirer",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "total": "Total",
+    "lamp": "lampe",
+    "lamps": "lampes",
+    "perPack": "par pack",
+    "represented": "au total",
+    "composition": "Par pack :",
+    "tax": "La configuration fiscale sera confirmée avant les ventes réelles.",
+    "delivery": "Livraison estimée sous {min} à {max} jours ouvrés.",
+    "loading": "Sécurisation de votre paiement…",
+    "loadingDetail": "Chargement du formulaire de paiement sécurisé.",
+    "updatingDelivery": "Mise à jour de la livraison…",
+    "unsupportedCountry": "Ce pays de livraison n’est pas disponible pour le moment.",
+    "retryButton": "Réessayer",
+    "powered": "Paiement sécurisé assuré par Stripe.",
+    "unavailable": "Le paiement n’est pas encore configuré. Votre sélection reste enregistrée.",
+    "invalid": "Vérifiez votre sélection et réessayez.",
+    "inventory": "Le stock disponible ne suffit pas pour cette sélection.",
+    "retry": "La commande n’a pas pu être confirmée. Réessayez avec la même sélection.",
+    "finishNote": "La disponibilité des finitions dépend de la confirmation du fournisseur.",
+    "cancel": "Annuler ce paiement",
+    "canceled": "Ce paiement a été annulé. Votre sélection est conservée.",
+    "colors": { "black": "Noir", "gold": "Or", "silver": "Argent" }
+  },
+  "Confirmation": {
+    "paidTitle": "Merci pour votre commande.",
+    "paidBody": "Votre paiement est confirmé. Conservez votre référence de commande.",
+    "pendingTitle": "Votre paiement est en cours de vérification.",
+    "pendingBody": "Veuillez attendre la confirmation. Quitter cette page n’annule pas le paiement.",
+    "failedTitle": "Cette commande n’a pas abouti.",
+    "failedBody": "Aucune confirmation de commande n’est disponible. Vous pouvez revenir à votre sélection et réessayer.",
+    "invalidTitle": "Confirmation introuvable.",
+    "invalidBody": "Vérifiez le lien privé issu du paiement ou contactez notre assistance.",
+    "reference": "Référence de commande",
+    "back": "Retour aux offres"
+  },
+  "Legal": {
+    "pending": "À confirmer avant le lancement",
+    "draftNotice": "Les informations sur le vendeur et les politiques commerciales ci-dessous sont incomplètes. Elles doivent être vérifiées avant toute vente ; ce texte n'est pas une politique juridique définitive.",
+    "factsTitle": "Informations propres au vendeur encore nécessaires",
+    "sellerFactsTitle": "Informations propres au vendeur",
+    "sellerInfo": {
+      "withdrawal": "Pour les achats de consommateurs éligibles, vous disposez de {days} jours à compter de la réception du bien pour notifier votre rétractation, sans motif. Une dépréciation peut être mise à votre charge si les manipulations dépassent celles nécessaires pour établir la nature, les caractéristiques et le bon fonctionnement du bien. Ce droit est distinct de vos droits en cas de défaut ou de non-conformité.",
+      "returnsEmail": "Avant de renvoyer un article, contactez-nous à {email} pour obtenir les consignes, puis expédiez-le à l'adresse de retour indiquée. Après réception et vérification, le remboursement est traité selon les règles applicables. Pour une rétractation de convenance, les frais directs de retour sont à votre charge lorsque la loi le permet ; cette règle ne s'applique pas automatiquement à un produit défectueux ou non conforme. Le contact préalable ne limite pas votre droit légal de rétractation.",
+      "returnsEmailWhatsApp": "Avant de renvoyer un article, contactez-nous à {email} ou sur WhatsApp pour obtenir les consignes, puis expédiez-le à l'adresse de retour indiquée. Après réception et vérification, le remboursement est traité selon les règles applicables. Pour une rétractation de convenance, les frais directs de retour sont à votre charge lorsque la loi le permet ; cette règle ne s'applique pas automatiquement à un produit défectueux ou non conforme. Le contact préalable ne limite pas votre droit légal de rétractation.",
+      "refunds": "En cas de rétractation valable, les sommes dues, y compris les frais de livraison standard initiaux, sont remboursées sans retard injustifié et au plus tard 14 jours après notification de votre décision. Le remboursement peut être différé jusqu'à la réception du bien ou d'une preuve de son expédition, selon la première éventualité. Il utilise le moyen de paiement initial, sauf accord exprès pour un autre moyen sans frais pour vous. Aucun remboursement instantané ni garantie commerciale supplémentaire n'est promis.",
+      "perOrder": "par commande",
+      "deliveryTime": "Livraison estimée sous {min} à {max} jours ouvrés pour la France, la Belgique, l’Allemagne et la Suisse.",
+      "switzerland": "Une livraison en Suisse peut entraîner de la TVA à l'importation, des droits de douane ou des frais de traitement du transporteur ou des douanes selon les règles applicables. Leur montant et leur prise en charge doivent encore être confirmés avant la production ; les frais de livraison LUMIZA ne promettent pas des taxes ou droits inclus."
+    },
+    "fields": {
+      "legalBusinessName": "Dénomination légale",
+      "registrationNumber": "Numéro d'immatriculation",
+      "vatNumber": "Numéro de TVA",
+      "registeredAddress": "Adresse du siège",
+      "contactEmail": "Email de contact",
+      "publicationDirector": "Directeur de publication",
+      "hostingProvider": "Hébergeur",
+      "supportEmail": "Email du service client",
+      "returnsAddress": "Adresse de retour",
+      "shipping": "Pays et frais de livraison",
+      "withdrawal": "Politique de rétractation",
+      "returns": "Procédure de retour",
+      "refunds": "Politique de remboursement",
+      "deliveryTimes": "Engagement de livraison",
+      "swissImportAndCustoms": "Importation, douane et fiscalité suisses",
+      "privacyRetention": "Durées de conservation des données"
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "introduction": "Informations sur l'exploitant de ce site. Les coordonnées propres au vendeur restent à confirmer avant le lancement.",
+      "sections": {
+        "publisher": {
+          "title": "Éditeur",
+          "body": "LUMIZA est la marque présentée sur ce site. L'identité légale, l'immatriculation et les coordonnées du vendeur n'ont pas encore été communiquées."
+        },
+        "hosting": {
+          "title": "Hébergement",
+          "body": "L'hébergeur et son adresse devront être indiqués une fois l'hébergement de production confirmé."
+        },
+        "contact": {
+          "title": "Contact",
+          "body": "Un moyen de contacter le service client devra être vérifié avant l'acceptation des commandes."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Confidentialité",
+      "introduction": "Cette page décrit les catégories de données utilisées par la boutique LUMIZA actuelle. Les durées de conservation et l'identité du responsable doivent encore être confirmées.",
+      "sections": {
+        "orders": {
+          "title": "Commandes et livraison",
+          "body": "Les commandes contiennent les produits et quantités choisis, le pays, la référence de commande et des identifiants de paiement. Stripe peut transmettre le nom et l'email du client après paiement. Stripe recueille l'adresse de livraison dans son interface ; LUMIZA ne copie actuellement pas l'adresse complète dans sa base de commandes."
+        },
+        "payment": {
+          "title": "Paiement",
+          "body": "La saisie de la carte a lieu dans l'interface Stripe intégrée. LUMIZA conserve l'identifiant de la session Stripe et, le cas échéant, celui de l'intention de paiement, mais pas le numéro complet de la carte."
+        },
+        "technical": {
+          "title": "Données techniques",
+          "body": "Le panier est conservé dans le stockage local ; un identifiant de tentative de commande est conservé dans le stockage de session. Le thème et les choix de consentement peuvent également être enregistrés dans ce navigateur. Les journaux serveur et du prestataire de paiement peuvent contenir des informations techniques nécessaires au fonctionnement et à la sécurité."
+        },
+        "sharing": {
+          "title": "Prestataires et droits",
+          "body": "Supabase héberge les données de commande et Stripe traite les paiements. Un contact pour la confidentialité, une durée de conservation et une procédure de demande doivent être définis avant la production. Aucun outil d'analyse ou de publicité n'est actuellement activé."
+        }
+      }
+    },
+    "terms": {
+      "title": "Conditions générales de vente",
+      "introduction": "Cette structure décrit le processus de commande actuel. Les politiques non décidées doivent être confirmées avant des ventes réelles.",
+      "sections": {
+        "seller": {
+          "title": "Vendeur et produits",
+          "body": "L'identité légale du vendeur reste à fournir. LUMIZA présente actuellement une lampe en finitions noir, or et argent avec les packs SOLO, DUO et PRO ; les caractéristiques et la disponibilité des finitions doivent être vérifiées."
+        },
+        "prices": {
+          "title": "Prix et paiement",
+          "body": "Les prix sont affichés en EUR. Le serveur vérifie le prix des produits et la livraison avant de créer un paiement par carte avec Stripe. Le traitement fiscal et la configuration de paiement de production restent à définir."
+        },
+        "ordering": {
+          "title": "Commande et confirmation",
+          "body": "Le client vérifie son panier, choisit un pays de livraison autorisé et renseigne les données de paiement et de livraison dans Stripe. Une commande n'est confirmée qu'après enregistrement du paiement ; une page privée affiche la référence."
+        },
+        "delivery": {
+          "title": "Livraison",
+          "body": "Les pays desservis et les frais, calculés par commande, figurent dans les informations ci-dessous. Livraison estimée sous {min} à {max} jours ouvrés."
+        },
+        "afterSale": {
+          "title": "Rétractation, retours, remboursements et défauts",
+          "body": "Le droit de rétractation, la procédure de retour et le remboursement sont précisés ci-dessous. Les droits relatifs aux produits défectueux ou non conformes restent distincts ; aucune garantie commerciale supplémentaire n'est promise."
+        },
+        "disputes": {
+          "title": "Assistance et litiges",
+          "body": "Le contact du service client figure ci-dessous. Les informations applicables à la résolution des litiges restent à compléter avant le lancement. Aucune limitation de responsabilité n'est adoptée dans ce brouillon."
+        }
+      }
+    },
+    "shippingReturns": {
+      "title": "Livraison et retours",
+      "introduction": "Les destinations, frais, délais estimés et modalités de retour figurent ci-dessous ; le traitement de l'importation suisse reste à confirmer.",
+      "sections": {
+        "destinations": {
+          "title": "Pays et frais",
+          "body": "Les pays desservis et les frais par commande figurent dans les informations ci-dessous. Le coût n'est pas multiplié par le nombre de packs, d'articles ou la quantité."
+        },
+        "timing": {
+          "title": "Délais de livraison",
+          "body": "Livraison estimée sous {min} à {max} jours ouvrés pour les destinations desservies. Les modalités en cas de retard devront être vérifiées avant les ventes de production."
+        },
+        "returns": {
+          "title": "Retours et remboursements",
+          "body": "L'adresse de retour, la procédure de rétractation et les règles de remboursement figurent ci-dessous. Elles sont distinctes des droits applicables aux produits défectueux ou non conformes."
+        },
+        "switzerland": {
+          "title": "Suisse",
+          "body": "Les frais de livraison LUMIZA ne déterminent pas la TVA à l'importation, les droits de douane ni les éventuels frais de traitement. Leur prise en charge doit être confirmée avant la production ; aucune promesse de taxes incluses ou de droits acquittés n'est faite."
+        }
+      }
+    },
+    "cookies": {
+      "title": "Cookies et préférences",
+      "introduction": "Vous pouvez gérer les choix facultatifs d'analyse et de marketing à tout moment depuis le pied de page.",
+      "sections": {
+        "necessary": {
+          "title": "Technologies nécessaires",
+          "body": "Le panier, l'identifiant de tentative de commande, le choix de thème et la décision de consentement soutiennent les fonctions actuelles du site. Ils ne nécessitent pas de consentement facultatif à l'analyse ou au marketing."
+        },
+        "optional": {
+          "title": "Catégories facultatives",
+          "body": "L'analyse et le marketing sont désactivés par défaut. Aucun outil d'analyse, Meta Pixel, Meta CAPI ou autre script marketing n'est installé. Tout futur script facultatif devra vérifier votre choix avant de se charger."
+        },
+        "control": {
+          "title": "Vos choix",
+          "body": "Utilisez Préférences des cookies dans le pied de page pour modifier votre décision. Le refus des catégories facultatives n'empêche pas la commande."
+        }
+      }
+    }
+  },
+  "Contact": {
+    "whatsapp": "Une question ? Discutez avec nous sur WhatsApp",
+    "message": "Bonjour LUMIZA, j’ai une question concernant vos lampes."
+  },
+  "Consent": {
+    "title": "Vos choix de confidentialité",
+    "description": "Le stockage nécessaire permet au panier et au paiement de fonctionner. L'analyse et le marketing restent désactivés sans votre accord.",
+    "acceptAll": "Tout accepter",
+    "rejectOptional": "Refuser le facultatif",
+    "customize": "Personnaliser",
+    "preferences": "Préférences des cookies",
+    "dialogTitle": "Préférences des cookies",
+    "close": "Fermer les préférences",
+    "save": "Enregistrer les choix",
+    "necessary": "Nécessaire",
+    "necessaryDetail": "Toujours actif pour les fonctions essentielles",
+    "analytics": "Analyse",
+    "marketing": "Marketing"
+  },
+  "Email": {
+    "subject": "Confirmation de commande",
+    "greeting": "Merci pour votre commande LUMIZA.",
+    "reference": "Référence de commande",
+    "supportPending": "Les coordonnées d'assistance seront communiquées avant le lancement."
+  }
+}

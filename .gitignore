@@ -1,0 +1,39 @@
+# dependencies
+/node_modules
+/.npm-cache
+
+# Next.js
+/.next
+/out
+/.vercel
+/.runtime
+
+# tests
+/coverage
+
+# environment (keep the documented template)
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials*.json
+
+# editors and operating systems
+.DS_Store
+Thumbs.db
+*.swp
+.idea
+.vscode/*
+!.vscode/extensions.json
+
+# logs
+*.log
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

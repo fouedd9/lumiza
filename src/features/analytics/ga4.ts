@@ -42,7 +42,7 @@ type GoogleTagState = {
 
 declare global {
   interface Window {
-    dataLayer?: unknown[][];
+    dataLayer?: IArguments[];
     gtag?: (...args: unknown[]) => void;
     __lumizaGoogleTag?: GoogleTagState;
   }
@@ -67,8 +67,10 @@ export function googleConsentState(
 
 function googleTag(measurementId: string) {
   window.dataLayer ??= [];
-  window.gtag ??= function gtag(...args: unknown[]) {
-    window.dataLayer!.push(args);
+  window.gtag ??= function gtag() {
+    // Google distinguishes executable gtag commands by their native Arguments shape.
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer!.push(arguments);
   };
   window.__lumizaGoogleTag ??= {
     measurementId,

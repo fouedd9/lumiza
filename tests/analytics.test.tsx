@@ -28,8 +28,12 @@ import { lumizaProduct } from "@/features/product/data/product";
 
 const measurementId = "G-VBVBMNQDCM";
 
-function commands() {
+function queuedCommands() {
   return window.dataLayer ?? [];
+}
+
+function commands() {
+  return queuedCommands().map((command) => Array.from(command));
 }
 
 describe("privacy-safe GA4 integration", () => {
@@ -63,6 +67,25 @@ describe("privacy-safe GA4 integration", () => {
       },
     ]);
     expect(queryByTestId("ga-script")).not.toBeInTheDocument();
+  });
+
+  it("queues native Arguments objects instead of inert plain Arrays", async () => {
+    saveConsent({ analytics: true, marketing: false });
+    render(<GoogleAnalytics measurementId={measurementId} />);
+    await waitFor(() => expect(queuedCommands()).toHaveLength(4));
+
+    expect(commands().map((command) => command.slice(0, 2))).toEqual([
+      ["consent", "default"],
+      ["consent", "update"],
+      ["js", expect.any(Date)],
+      ["config", measurementId],
+    ]);
+    for (const command of queuedCommands()) {
+      expect(Array.isArray(command)).toBe(false);
+      expect(Object.prototype.toString.call(command)).toBe(
+        "[object Arguments]",
+      );
+    }
   });
 
   it("loads after analytics grant, updates revocation, and keeps marketing independent", async () => {

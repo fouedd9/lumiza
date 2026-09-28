@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { isCommerceReady } from "@/config/commerce-env.server";
 import { PurchaseAnalytics } from "@/features/analytics/purchase-analytics";
+import { MetaPurchaseAnalytics } from "@/features/analytics/meta-purchase-analytics";
 import { checkConfirmation } from "@/features/commerce/services/confirmation";
 import { FINISHES } from "@/features/commerce/schemas/cart";
 import { Link } from "@/i18n/navigation";
@@ -51,16 +52,28 @@ export default async function ConfirmationPage({
       result.totalInCents !== undefined &&
       result.shippingInCents !== undefined &&
       result.items ? (
-        <PurchaseAnalytics
-          locale={locale}
-          order={{
-            reference: result.reference,
-            subtotalInCents: result.subtotalInCents,
-            totalInCents: result.totalInCents,
-            shippingInCents: result.shippingInCents,
-            items: result.items,
-          }}
-        />
+        <>
+          <PurchaseAnalytics
+            locale={locale}
+            order={{
+              reference: result.reference,
+              subtotalInCents: result.subtotalInCents,
+              totalInCents: result.totalInCents,
+              shippingInCents: result.shippingInCents,
+              items: result.items,
+            }}
+          />
+          <MetaPurchaseAnalytics
+            locale={locale}
+            order={{
+              reference: result.reference,
+              subtotalInCents: result.subtotalInCents,
+              totalInCents: result.totalInCents,
+              shippingInCents: result.shippingInCents,
+              items: result.items,
+            }}
+          />
+        </>
       ) : null}
       <Container>
         <div

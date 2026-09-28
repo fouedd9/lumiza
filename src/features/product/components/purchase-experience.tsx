@@ -3,6 +3,11 @@
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 
 import { catalogItem, trackGaEvent } from "@/features/analytics/ga4";
+import {
+  META_READY_EVENT,
+  metaProductPayload,
+  trackMetaEvent,
+} from "@/features/analytics/meta-pixel";
 import { openCart } from "@/features/commerce/components/cart-drawer-state";
 import {
   addCartItem,
@@ -84,6 +89,7 @@ export function PurchaseExperience({
   const [quantity, setQuantity] = useState(1);
   const [error, setError] = useState(false);
   const viewedPack = useRef<string | null>(null);
+  const metaViewedPack = useRef<string | null>(null);
   const items = useCart();
   const pack = catalog?.packs.find((entry) => entry.id === selectedPack);
   const selectedLamps = FINISHES.reduce(
@@ -123,6 +129,19 @@ export function PurchaseExperience({
         }),
       ],
     });
+  }, [labels.name, pack]);
+
+  useEffect(() => {
+    const report = () => {
+      if (!pack || metaViewedPack.current === pack.id) return;
+      if (
+        trackMetaEvent("ViewContent", metaProductPayload(pack, 1, labels.name))
+      )
+        metaViewedPack.current = pack.id;
+    };
+    report();
+    window.addEventListener(META_READY_EVENT, report);
+    return () => window.removeEventListener(META_READY_EVENT, report);
   }, [labels.name, pack]);
 
   function changeColor(color: ProductColor) {
@@ -197,6 +216,10 @@ export function PurchaseExperience({
         }),
       ],
     });
+    trackMetaEvent(
+      "AddToCart",
+      metaProductPayload(pack, effectiveQuantity, labels.name),
+    );
     setQuantity(1);
     setError(false);
     openCart(event.currentTarget);

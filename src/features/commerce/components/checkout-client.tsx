@@ -9,6 +9,11 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { cartEcommercePayload, trackGaEvent } from "@/features/analytics/ga4";
+import {
+  META_READY_EVENT,
+  metaCartPayload,
+  trackMetaEvent,
+} from "@/features/analytics/meta-pixel";
 import { lumizaProduct } from "@/features/product/data/product";
 import type { PurchaseCatalog } from "@/features/product/data/purchase-catalog.server";
 import type { ProductColor } from "@/features/product/types/product";
@@ -201,6 +206,7 @@ export function CheckoutClient({
   );
   const transitionRef = useRef(false);
   const checkoutTracked = useRef(false);
+  const metaCheckoutTracked = useRef(false);
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState<{
     selection: string;
@@ -257,6 +263,28 @@ export function CheckoutClient({
       }),
     );
   }, [catalog, items, locale, validSelection]);
+
+  useEffect(() => {
+    const report = () => {
+      if (
+        !validSelection ||
+        !catalog ||
+        !publishableKey ||
+        metaCheckoutTracked.current
+      )
+        return;
+      if (
+        trackMetaEvent(
+          "InitiateCheckout",
+          metaCartPayload(items, catalog.packs),
+        )
+      )
+        metaCheckoutTracked.current = true;
+    };
+    report();
+    window.addEventListener(META_READY_EVENT, report);
+    return () => window.removeEventListener(META_READY_EVENT, report);
+  }, [catalog, items, publishableKey, validSelection]);
 
   useEffect(() => {
     if (

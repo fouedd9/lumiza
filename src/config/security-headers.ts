@@ -5,11 +5,11 @@ export const enforcedCsp =
 
 export const reportOnlyCsp = [
   "default-src 'self'",
-  "script-src 'self' https://js.stripe.com https://www.googletagmanager.com",
+  "script-src 'self' https://js.stripe.com https://www.googletagmanager.com https://connect.facebook.net",
   "style-src 'self'",
-  "img-src 'self' data: blob: https://*.stripe.com https://*.google-analytics.com https://www.googletagmanager.com",
+  "img-src 'self' data: blob: https://*.stripe.com https://*.google-analytics.com https://www.googletagmanager.com https://www.facebook.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://api.stripe.com https://r.stripe.com https://*.stripe.com https://*.supabase.co https://*.google-analytics.com https://www.googletagmanager.com",
+  "connect-src 'self' https://api.stripe.com https://r.stripe.com https://*.stripe.com https://*.supabase.co https://*.google-analytics.com https://www.googletagmanager.com https://www.facebook.com",
   "frame-src https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com",
   "form-action 'self' https://checkout.stripe.com",
   "object-src 'none'",

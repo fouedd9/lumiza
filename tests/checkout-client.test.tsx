@@ -3,6 +3,13 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
+vi.mock("@/features/analytics/meta-pixel", async (importOriginal) => {
+  const actual =
+    await importOriginal<typeof import("@/features/analytics/meta-pixel")>();
+  return { ...actual, trackMetaEvent: vi.fn(() => true) };
+});
+
+import { trackMetaEvent } from "@/features/analytics/meta-pixel";
 import { CheckoutClient } from "@/features/commerce/components/checkout-client";
 import { saveCart } from "@/features/commerce/components/cart-store";
 import { lumizaProduct } from "@/features/product/data/product";
@@ -69,6 +76,7 @@ describe("automatic embedded checkout", () => {
     window.localStorage.clear();
     window.sessionStorage.clear();
     vi.unstubAllGlobals();
+    vi.mocked(trackMetaEvent).mockClear().mockReturnValue(true);
   });
 
   it("shows a mixed DUO and SOLO composition without treating a finish as the whole pack", async () => {
@@ -115,6 +123,13 @@ describe("automatic embedded checkout", () => {
       screen.queryByRole("button", { name: /continuer vers le paiement/i }),
     ).not.toBeInTheDocument();
     expect(screen.getByText(/LUMIZA · SOLO/)).toBeInTheDocument();
+    expect(trackMetaEvent).toHaveBeenCalledWith(
+      "InitiateCheckout",
+      expect.objectContaining({
+        content_ids: ["LUMIZA-LED-01-SOLO"],
+        currency: "EUR",
+      }),
+    );
     resolve(response({ clientSecret: "cs_test_one", token: "test-token" }));
     expect(await screen.findByTestId("embedded-checkout")).toBeInTheDocument();
     expect(screen.getByText(fr.Checkout.cancel)).toBeInTheDocument();
@@ -129,6 +144,11 @@ describe("automatic embedded checkout", () => {
       screen.getByRole("link", { name: fr.Checkout.back }),
     ).toHaveAttribute("href", "/#offers");
     expect(fetchMock).not.toHaveBeenCalled();
+    expect(
+      vi
+        .mocked(trackMetaEvent)
+        .mock.calls.some(([event]) => event === "InitiateCheckout"),
+    ).toBe(false);
   });
 
   it.each(["fr", "en", "de"] as const)(

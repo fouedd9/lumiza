@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { GoogleAnalytics } from "@/features/analytics/google-analytics";
+import { MetaPixelProvider } from "@/features/analytics/meta-pixel-provider";
 import { ConsentManager } from "@/features/consent/consent-manager";
 import { WhatsAppContact } from "@/components/contact/whatsapp-contact";
 import { getCanonicalSiteUrl } from "@/config/site";
@@ -140,6 +141,9 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <GoogleAnalytics
               measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+            />
+            <MetaPixelProvider
+              pixelId={process.env.NEXT_PUBLIC_META_PIXEL_ID}
             />
             <Header />
             <main>{children}</main>

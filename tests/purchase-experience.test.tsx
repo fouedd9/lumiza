@@ -1,7 +1,14 @@
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
+vi.mock("@/features/analytics/meta-pixel", async (importOriginal) => {
+  const actual =
+    await importOriginal<typeof import("@/features/analytics/meta-pixel")>();
+  return { ...actual, trackMetaEvent: vi.fn(() => true) };
+});
+
+import { trackMetaEvent } from "@/features/analytics/meta-pixel";
 import { closeCart } from "@/features/commerce/components/cart-drawer-state";
 import {
   PurchaseExperience,
@@ -82,6 +89,7 @@ describe("premium purchase configuration", () => {
   beforeEach(() => {
     window.localStorage.clear();
     closeCart();
+    vi.mocked(trackMetaEvent).mockClear().mockReturnValue(true);
   });
 
   it("composes a mixed DUO, updates price, and adds one configured cart line", async () => {
@@ -113,6 +121,31 @@ describe("premium purchase configuration", () => {
         quantity: 1,
       },
     ]);
+    expect(trackMetaEvent).toHaveBeenCalledWith(
+      "AddToCart",
+      expect.objectContaining({
+        content_ids: ["LUMIZA-LED-01-DUO"],
+        value: 59.99,
+        currency: "EUR",
+      }),
+    );
+  });
+
+  it("does not send AddToCart while the selection is invalid", async () => {
+    render(
+      <PurchaseExperience
+        locale="en"
+        media={media}
+        catalog={{ packs: lumizaProduct.packs, colors: lumizaProduct.colors }}
+        labels={labels}
+      />,
+    );
+    await userEvent.click(screen.getByRole("button", { name: /Add to cart/ }));
+    expect(
+      vi
+        .mocked(trackMetaEvent)
+        .mock.calls.some(([event]) => event === "AddToCart"),
+    ).toBe(false);
   });
 
   it("keeps the selected finish aligned with gallery navigation", async () => {

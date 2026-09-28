@@ -15,6 +15,10 @@ export default withNextIntl({
         ),
       },
       {
+        source: "/api/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
         source: "/:locale/order/confirmation",
         headers: [
           { key: "Cache-Control", value: "private, no-store, max-age=0" },

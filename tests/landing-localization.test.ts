@@ -30,19 +30,19 @@ describe("landing page translations", () => {
   it.each([
     [
       "fr",
-      "La lumière qui rend chaque soir",
+      "La lampe LED sans fil rechargeable qui rend chaque soir",
       "Nos offres",
       "La lampe fonctionne-t-elle sans fil ?",
     ],
     [
       "en",
-      "Light that makes every evening",
+      "The rechargeable cordless LED table lamp that makes every evening",
       "Our offers",
       "Is the lamp cordless?",
     ],
     [
       "de",
-      "Licht, das jeden Abend",
+      "Die wiederaufladbare kabellose LED-Tischleuchte, die jeden Abend",
       "Unsere Angebote",
       "Funktioniert die Leuchte kabellos?",
     ],

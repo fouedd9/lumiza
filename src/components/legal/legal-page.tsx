@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 import { business, commercePolicy } from "@/config/business";
-import { getPublicSiteUrl } from "@/config/site";
+import { getCanonicalSiteUrl } from "@/config/site";
 import { routing } from "@/i18n/routing";
 import { Container } from "@/components/ui/container";
 import {
@@ -30,6 +30,19 @@ const paths: Record<LegalKind, string> = {
   cookies: "cookies",
 };
 
+const unfinishedLegalKinds = new Set<LegalKind>([
+  "legal",
+  "privacy",
+  "terms",
+  "shippingReturns",
+]);
+
+const ogLocales = {
+  fr: "fr_FR",
+  en: "en_GB",
+  de: "de_DE",
+} as const;
+
 export async function legalMetadata(
   locale: string,
   kind: LegalKind,
@@ -37,21 +50,42 @@ export async function legalMetadata(
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: "Legal" });
   const copy = t.raw(kind) as PageCopy;
-  const siteUrl = getPublicSiteUrl();
+  const siteUrl = getCanonicalSiteUrl();
+  const canonicalPath = `/${locale}/${paths[kind]}`;
   return {
     title: `${copy.title} | LUMIZA`,
     description: copy.introduction,
-    alternates: siteUrl
-      ? {
-          canonical: `/${locale}/${paths[kind]}`,
-          languages: Object.fromEntries(
-            routing.locales.map((candidate) => [
-              candidate,
-              `/${candidate}/${paths[kind]}`,
-            ]),
-          ),
-        }
+    robots: unfinishedLegalKinds.has(kind)
+      ? { index: false, follow: true }
       : undefined,
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        ...Object.fromEntries(
+          routing.locales.map((candidate) => [
+            candidate,
+            `/${candidate}/${paths[kind]}`,
+          ]),
+        ),
+        "x-default": `/fr/${paths[kind]}`,
+      },
+    },
+    openGraph: {
+      title: `${copy.title} | LUMIZA`,
+      description: copy.introduction,
+      url: new URL(canonicalPath, siteUrl),
+      siteName: "LUMIZA",
+      locale: ogLocales[locale],
+      alternateLocale: routing.locales
+        .filter((candidate) => candidate !== locale)
+        .map((candidate) => ogLocales[candidate]),
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: `${copy.title} | LUMIZA`,
+      description: copy.introduction,
+    },
   };
 }
 

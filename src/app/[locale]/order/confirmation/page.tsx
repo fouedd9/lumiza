@@ -11,7 +11,12 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { robots: { index: false, follow: false } };
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+  alternates: null,
+  openGraph: null,
+  twitter: null,
+};
 
 export default async function ConfirmationPage({
   params,

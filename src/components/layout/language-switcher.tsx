@@ -1,9 +1,9 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useTransition } from "react";
+import { useRef, useTransition, type MouseEvent } from "react";
 
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { type AppLocale, routing } from "@/i18n/routing";
 
 type LanguageSwitcherProps = {
@@ -19,8 +19,13 @@ export function LanguageSwitcher({
   const pathname = usePathname();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+  const detailsRef = useRef<HTMLDetailsElement>(null);
 
-  function changeLocale(nextLocale: AppLocale) {
+  function changeLocale(
+    event: MouseEvent<HTMLAnchorElement>,
+    nextLocale: AppLocale,
+  ) {
+    event.preventDefault();
     startTransition(() => {
       const suffix = `${window.location.search}${window.location.hash}`;
       router.replace(`${pathname}${suffix}`, {
@@ -28,31 +33,39 @@ export function LanguageSwitcher({
         scroll: false,
       });
     });
+    detailsRef.current?.removeAttribute("open");
   }
 
   return (
-    <label className="relative inline-flex items-center">
-      <span className="sr-only">{label}</span>
-      <select
+    <details ref={detailsRef} className="group relative" aria-busy={isPending}>
+      <summary
         aria-label={label}
         title={languageNames[locale]}
-        className="border-border bg-surface-elevated hover:border-primary focus-visible:border-primary focus-visible:ring-primary/30 min-h-10 cursor-pointer appearance-none rounded-full border py-2 pr-7 pl-3 text-xs font-bold tracking-[0.08em] uppercase transition-colors outline-none focus-visible:ring-2 disabled:cursor-wait"
-        disabled={isPending}
-        value={locale}
-        onChange={(event) => changeLocale(event.target.value as AppLocale)}
+        className="border-border bg-surface-elevated hover:border-primary focus-visible:border-primary focus-visible:ring-primary/30 flex min-h-10 cursor-pointer list-none items-center rounded-full border py-2 pr-3 pl-3 text-xs font-bold tracking-[0.08em] uppercase transition-colors outline-none focus-visible:ring-2"
+      >
+        {locale.toUpperCase()}
+        <span aria-hidden="true" className="ml-2 text-xs">
+          ↓
+        </span>
+      </summary>
+      <nav
+        aria-label={label}
+        className="border-border bg-surface-elevated absolute right-0 z-40 mt-2 min-w-32 overflow-hidden rounded-2xl border p-1 shadow-xl"
       >
         {routing.locales.map((supportedLocale) => (
-          <option key={supportedLocale} value={supportedLocale}>
-            {supportedLocale.toUpperCase()}
-          </option>
+          <Link
+            key={supportedLocale}
+            href={pathname}
+            locale={supportedLocale}
+            hrefLang={supportedLocale}
+            aria-current={supportedLocale === locale ? "page" : undefined}
+            onClick={(event) => changeLocale(event, supportedLocale)}
+            className="hover:bg-surface focus-visible:bg-surface block min-h-10 rounded-xl px-3 py-2 text-sm font-semibold outline-none"
+          >
+            {languageNames[supportedLocale]}
+          </Link>
         ))}
-      </select>
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute right-2.5 text-xs"
-      >
-        ↓
-      </span>
-    </label>
+      </nav>
+    </details>
   );
 }

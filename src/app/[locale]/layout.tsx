@@ -10,7 +10,8 @@ import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ConsentManager } from "@/features/consent/consent-manager";
 import { WhatsAppContact } from "@/components/contact/whatsapp-contact";
-import { getPublicSiteUrl } from "@/config/site";
+import { getCanonicalSiteUrl } from "@/config/site";
+import { getProductMedia } from "@/features/product/data/product-media";
 import { routing } from "@/i18n/routing";
 import "@/styles/globals.css";
 
@@ -53,28 +54,58 @@ export async function generateMetadata({
   }
 
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const siteUrl = getPublicSiteUrl();
+  const siteUrl = getCanonicalSiteUrl();
+  const canonicalPath = `/${locale}`;
+  const canonicalUrl = new URL(canonicalPath, siteUrl);
+  const ogLocales = {
+    fr: "fr_FR",
+    en: "en_GB",
+    de: "de_DE",
+  } as const;
+  const heroMedia = getProductMedia(locale).find(
+    (item) => item.kind === "product" && item.color === "gold",
+  )!;
 
   return {
-    metadataBase: siteUrl ?? undefined,
+    metadataBase: siteUrl,
     title: t("title"),
     description: t("description"),
-    alternates: siteUrl
-      ? {
-          canonical: `/${locale}`,
-          languages: Object.fromEntries(
-            routing.locales.map((supportedLocale) => [
-              supportedLocale,
-              `/${supportedLocale}`,
-            ]),
-          ),
-        }
-      : undefined,
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        ...Object.fromEntries(
+          routing.locales.map((supportedLocale) => [
+            supportedLocale,
+            `/${supportedLocale}`,
+          ]),
+        ),
+        "x-default": "/fr",
+      },
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      locale,
+      url: canonicalUrl,
+      siteName: "LUMIZA",
+      locale: ogLocales[locale],
+      alternateLocale: routing.locales
+        .filter((candidate) => candidate !== locale)
+        .map((candidate) => ogLocales[candidate]),
       type: "website",
+      images: [
+        {
+          url: new URL(heroMedia.src, siteUrl),
+          width: heroMedia.width,
+          height: heroMedia.height,
+          alt: heroMedia.alt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: t("title"),
+      description: t("description"),
+      images: [new URL(heroMedia.src, siteUrl)],
     },
   };
 }

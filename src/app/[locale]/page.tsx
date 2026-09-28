@@ -6,6 +6,7 @@ import { FinalCtaSection } from "@/components/sections/final-cta-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { UseCasesSection } from "@/components/sections/use-cases-section";
 import { ProductBenefits } from "@/features/product/components/product-benefits";
+import { ProductStructuredData } from "@/features/product/components/product-structured-data";
 import { PurchaseSection } from "@/features/product/components/purchase-section";
 import { routing } from "@/i18n/routing";
 
@@ -25,6 +26,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <>
+      <ProductStructuredData locale={locale} />
       <HeroSection locale={locale} />
       <PurchaseSection locale={locale} />
       <ProductBenefits locale={locale} />

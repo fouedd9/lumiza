@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 
+import { catalogItem, trackGaEvent } from "@/features/analytics/ga4";
 import { openCart } from "@/features/commerce/components/cart-drawer-state";
 import {
   addCartItem,
@@ -20,6 +21,7 @@ import type { AppLocale } from "@/i18n/routing";
 import { formatCurrency } from "@/lib/utils/format-currency";
 
 import type { ResolvedProductMedia } from "../data/product-media";
+import { lumizaProduct } from "../data/product";
 import type { PurchaseCatalog } from "../data/purchase-catalog.server";
 import type { ProductColor, ProductPack } from "../types/product";
 import { PackSelector, type PackLabels } from "./pack-selector";
@@ -81,6 +83,7 @@ export function PurchaseExperience({
   );
   const [quantity, setQuantity] = useState(1);
   const [error, setError] = useState(false);
+  const viewedPack = useRef<string | null>(null);
   const items = useCart();
   const pack = catalog?.packs.find((entry) => entry.id === selectedPack);
   const selectedLamps = FINISHES.reduce(
@@ -106,6 +109,21 @@ export function PurchaseExperience({
       )
     : 0;
   const effectiveQuantity = Math.min(quantity, maxAddQuantity);
+
+  useEffect(() => {
+    if (!pack || viewedPack.current === pack.id) return;
+    viewedPack.current = pack.id;
+    trackGaEvent("view_item", {
+      currency: "EUR",
+      value: pack.priceInCents / 100,
+      items: [
+        catalogItem(pack, 1, {
+          sku: lumizaProduct.sku,
+          name: labels.name,
+        }),
+      ],
+    });
+  }, [labels.name, pack]);
 
   function changeColor(color: ProductColor) {
     setSelectedColor(color);
@@ -169,6 +187,16 @@ export function PurchaseExperience({
       setError(true);
       return;
     }
+    trackGaEvent("add_to_cart", {
+      currency: "EUR",
+      value: (pack.priceInCents * effectiveQuantity) / 100,
+      items: [
+        catalogItem(pack, effectiveQuantity, {
+          sku: lumizaProduct.sku,
+          name: labels.name,
+        }),
+      ],
+    });
     setQuantity(1);
     setError(false);
     openCart(event.currentTarget);

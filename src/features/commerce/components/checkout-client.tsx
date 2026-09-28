@@ -8,6 +8,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { cartEcommercePayload, trackGaEvent } from "@/features/analytics/ga4";
 import { lumizaProduct } from "@/features/product/data/product";
 import type { PurchaseCatalog } from "@/features/product/data/purchase-catalog.server";
 import type { ProductColor } from "@/features/product/types/product";
@@ -199,6 +200,7 @@ export function CheckoutClient({
     null,
   );
   const transitionRef = useRef(false);
+  const checkoutTracked = useRef(false);
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState<{
     selection: string;
@@ -243,6 +245,18 @@ export function CheckoutClient({
       : 0;
   const shipping = shippingCents(displayCountry);
   const total = subtotal + shipping;
+
+  useEffect(() => {
+    if (!validSelection || !catalog || checkoutTracked.current) return;
+    checkoutTracked.current = true;
+    trackGaEvent(
+      "begin_checkout",
+      cartEcommercePayload(items, catalog.packs, {
+        sku: lumizaProduct.sku,
+        name: lumizaProduct.name[locale],
+      }),
+    );
+  }, [catalog, items, locale, validSelection]);
 
   useEffect(() => {
     if (

@@ -18,10 +18,14 @@ import {
 export type ConfirmationResult = {
   state: "invalid" | "pending" | "paid" | "failed";
   reference?: string;
+  subtotalInCents?: number;
+  totalInCents?: number;
+  shippingInCents?: number;
   items?: {
     pack: string;
     quantity: number;
     unitQuantity: number;
+    unitPriceInCents: number;
     composition: Composition;
   }[];
 };
@@ -67,12 +71,16 @@ export async function checkConfirmation(
           pack: line.packs.code,
           quantity: line.quantity,
           unitQuantity: line.unit_quantity,
+          unitPriceInCents: line.unit_price_cents,
           composition: line.composition,
         }))
       : undefined;
   return {
     state,
     reference: state === "paid" ? order.public_order_reference : undefined,
+    subtotalInCents: state === "paid" ? order.subtotal_cents : undefined,
+    totalInCents: state === "paid" ? order.total_cents : undefined,
+    shippingInCents: state === "paid" ? order.shipping_cents : undefined,
     items,
   };
 }

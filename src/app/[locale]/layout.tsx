@@ -8,6 +8,7 @@ import type { ReactNode } from "react";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { GoogleAnalytics } from "@/features/analytics/google-analytics";
 import { ConsentManager } from "@/features/consent/consent-manager";
 import { WhatsAppContact } from "@/components/contact/whatsapp-contact";
 import { getCanonicalSiteUrl } from "@/config/site";
@@ -137,6 +138,9 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+            <GoogleAnalytics
+              measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+            />
             <Header />
             <main>{children}</main>
             <Footer />

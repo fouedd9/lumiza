@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 
 import { Container } from "@/components/ui/container";
 import { isCommerceReady } from "@/config/commerce-env.server";
+import { PurchaseAnalytics } from "@/features/analytics/purchase-analytics";
 import { checkConfirmation } from "@/features/commerce/services/confirmation";
 import { FINISHES } from "@/features/commerce/schemas/cart";
 import { Link } from "@/i18n/navigation";
@@ -44,6 +45,23 @@ export default async function ConfirmationPage({
   const bodyKey = `${result.state}Body` as const;
   return (
     <section className="py-20 sm:py-32">
+      {result.state === "paid" &&
+      result.reference &&
+      result.subtotalInCents !== undefined &&
+      result.totalInCents !== undefined &&
+      result.shippingInCents !== undefined &&
+      result.items ? (
+        <PurchaseAnalytics
+          locale={locale}
+          order={{
+            reference: result.reference,
+            subtotalInCents: result.subtotalInCents,
+            totalInCents: result.totalInCents,
+            shippingInCents: result.shippingInCents,
+            items: result.items,
+          }}
+        />
+      ) : null}
       <Container>
         <div
           className="border-border bg-surface-elevated mx-auto max-w-2xl rounded-[2rem] border p-8 sm:p-12"

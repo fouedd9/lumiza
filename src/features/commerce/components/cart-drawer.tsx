@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
+import { cartEcommercePayload, trackGaEvent } from "@/features/analytics/ga4";
 import { productMedia } from "@/features/product/data/product-media";
+import { lumizaProduct } from "@/features/product/data/product";
 import type {
   ProductColor,
   ProductPack,
@@ -101,7 +103,21 @@ export function CartDrawer({
   const items = useCart();
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
+  const wasOpen = useRef(false);
   const [limitReached, setLimitReached] = useState(false);
+
+  useEffect(() => {
+    if (open && !wasOpen.current && items.length) {
+      trackGaEvent(
+        "view_cart",
+        cartEcommercePayload(items, packs, {
+          sku: lumizaProduct.sku,
+          name: lumizaProduct.name[locale],
+        }),
+      );
+    }
+    wasOpen.current = open;
+  }, [items, locale, open, packs]);
 
   useEffect(() => {
     if (!open) return;

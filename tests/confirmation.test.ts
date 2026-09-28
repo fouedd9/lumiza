@@ -23,6 +23,8 @@ const baseOrder = {
   id: "order-internal",
   stripe_checkout_session_id: "cs_test_123",
   total_cents: 4499,
+  subtotal_cents: 3499,
+  shipping_cents: 1000,
   public_order_reference: "LZ-TEST123",
   status: "pending_payment",
 };
@@ -47,6 +49,7 @@ describe("private order confirmation", () => {
       {
         quantity: 1,
         unit_quantity: 2,
+        unit_price_cents: 3499,
         packs: { code: "duo" },
         composition: { black: 0, gold: 1, silver: 1 },
       },
@@ -104,11 +107,15 @@ describe("private order confirmation", () => {
     expect(await checkConfirmation(token, "cs_test_123")).toEqual({
       state: "paid",
       reference: "LZ-TEST123",
+      subtotalInCents: 3499,
+      totalInCents: 4499,
+      shippingInCents: 1000,
       items: [
         {
           pack: "duo",
           quantity: 1,
           unitQuantity: 2,
+          unitPriceInCents: 3499,
           composition: { black: 0, gold: 1, silver: 1 },
         },
       ],

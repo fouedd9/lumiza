@@ -2,6 +2,7 @@ import "server-only";
 
 import type Stripe from "stripe";
 import { requireCommerceEnv } from "@/config/commerce-env.server";
+import { notifyNewPaidOrder } from "@/features/telegram/paid-order-notification.server";
 
 import {
   enqueuePaidEmail,
@@ -89,6 +90,11 @@ export async function processCurrentSession(
       await enqueuePaidEmail(session.id);
     } catch {
       console.error("Paid-order email enqueue unavailable");
+    }
+    try {
+      await notifyNewPaidOrder(session);
+    } catch {
+      console.error("[telegram] paid notification unavailable");
     }
   }
   return result;

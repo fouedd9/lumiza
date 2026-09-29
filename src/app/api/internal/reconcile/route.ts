@@ -13,6 +13,7 @@ import {
   stripeSessionMatchesMode,
 } from "@/features/commerce/stripe/mode";
 import { dispatchPendingConfirmations } from "@/features/email/confirmation-email.server";
+import { dispatchPendingPaidTelegram } from "@/features/telegram/paid-order-notification.server";
 
 export const runtime = "nodejs";
 
@@ -84,6 +85,12 @@ export async function GET(request: Request) {
   } catch {
     failed++;
     console.error("Confirmation email reconciliation unavailable");
+  }
+  try {
+    await dispatchPendingPaidTelegram();
+  } catch {
+    // Telegram is secondary: a notification outage must not fail commerce cron.
+    console.error("[telegram] reconciliation unavailable");
   }
   return NextResponse.json(
     { examined, failed },

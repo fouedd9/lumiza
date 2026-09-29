@@ -232,6 +232,57 @@ export async function enqueuePaidEmail(sessionId: string) {
   return unwrap(result);
 }
 
+export type TelegramJob = { id: string; order_id: string };
+
+export async function claimPaidTelegram(
+  workerId: string,
+  sessionId: string | null = null,
+): Promise<TelegramJob | null> {
+  const result = await client().rpc("commerce_claim_paid_telegram", {
+    p_worker: workerId,
+    p_session: sessionId,
+  });
+  if (result.error) throw new Error("Telegram claim unavailable");
+  return result.data as TelegramJob | null;
+}
+
+export async function finishPaidTelegram(
+  jobId: string,
+  workerId: string,
+  result: "sent" | "retry" | "uncertain",
+) {
+  const response = await client().rpc("commerce_finish_paid_telegram", {
+    p_job: jobId,
+    p_worker: workerId,
+    p_result: result,
+  });
+  if (response.error) throw new Error("Telegram acknowledgement unavailable");
+}
+
+export async function getPaidOrderForTelegram(orderId: string) {
+  const result = await client()
+    .from("orders")
+    .select(
+      "id,status,public_order_reference,currency,customer_name,customer_email,shipping_country,shipping_cents,total_cents,stripe_checkout_session_id",
+    )
+    .eq("id", orderId)
+    .eq("status", "paid")
+    .maybeSingle();
+  if (result.error) throw new Error("Telegram paid order lookup unavailable");
+  return result.data as null | {
+    id: string;
+    status: "paid";
+    public_order_reference: string;
+    currency: "EUR";
+    customer_name: string | null;
+    customer_email: string | null;
+    shipping_country: ShippingCountry;
+    shipping_cents: number;
+    total_cents: number;
+    stripe_checkout_session_id: string;
+  };
+}
+
 export async function backfillPaidEmails() {
   const result = await client().rpc("commerce_backfill_paid_emails");
   return unwrap(result) as number;

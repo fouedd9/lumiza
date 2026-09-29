@@ -1,7 +1,14 @@
 import { describe, expect, it } from "vitest";
 
-import { quoteCart, shippingCents } from "@/features/commerce/domain/pricing";
-import { snapshotsMatchQuote } from "@/features/commerce/domain/catalog-guard";
+import {
+  quoteCart as quoteCartWithPacks,
+  shippingCents,
+} from "@/features/commerce/domain/pricing";
+import {
+  packsFromSnapshots,
+  snapshotsMatchQuote,
+} from "@/features/commerce/domain/catalog-guard";
+import { lumizaProduct } from "@/features/product/data/product";
 import { publicPaymentState } from "@/features/commerce/domain/states";
 import {
   cartItemSchema,
@@ -15,6 +22,10 @@ import {
 } from "@/features/commerce/domain/shipping";
 
 const attemptId = "a37e6d6e-3b0d-4f72-9e1a-9ca900dda143";
+const quoteCart = (
+  items: Parameters<typeof quoteCartWithPacks>[0],
+  country: Parameters<typeof quoteCartWithPacks>[1],
+) => quoteCartWithPacks(items, country, lumizaProduct.packs);
 const solid = (
   packId: "solo" | "duo" | "pro",
   color: "black" | "gold" | "silver",
@@ -209,5 +220,37 @@ describe("checkout domain", () => {
     expect(
       snapshotsMatchQuote([{ ...snapshot, unit_price_cents: 5998 }], quote),
     ).toBe(false);
+  });
+
+  it("quotes an order from its immutable snapshot, not changed launch defaults", () => {
+    const snapshot = {
+      quantity: 1,
+      unit_quantity: 1,
+      unit_price_cents: 4499,
+      total_price_cents: 4499,
+      packs: { code: "solo" },
+      composition: { black: 1, gold: 0, silver: 0 },
+    };
+    const packs = packsFromSnapshots([snapshot], lumizaProduct.packs);
+    expect(
+      quoteCartWithPacks([solid("solo", "black")], "FR", packs).totalCents,
+    ).toBe(4499);
+    expect(
+      snapshotsMatchQuote(
+        [snapshot],
+        quoteCartWithPacks([solid("solo", "black")], "FR", packs),
+      ),
+    ).toBe(true);
+
+    const historical = {
+      ...snapshot,
+      unit_price_cents: 3499,
+      total_price_cents: 3499,
+    };
+    expect(packsFromSnapshots([historical], packs)[0].priceInCents).toBe(3499);
+    expect(historical.unit_price_cents).toBe(3499);
+    expect(() =>
+      packsFromSnapshots([{ ...snapshot, unit_price_cents: -1 }], packs),
+    ).toThrow();
   });
 });

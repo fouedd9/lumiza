@@ -7,9 +7,12 @@ import deMessages from "@/../messages/de.json";
 import { requireCommerceEnv } from "@/config/commerce-env.server";
 import { lumizaProduct } from "@/features/product/data/product";
 
-import { quoteCart } from "../domain/pricing";
-import { FINISHES } from "../schemas/cart";
-import { snapshotsMatchQuote } from "../domain/catalog-guard";
+import { quoteCart, shippingCents } from "../domain/pricing";
+import { cartSchema, FINISHES } from "../schemas/cart";
+import {
+  packsFromSnapshots,
+  snapshotsMatchQuote,
+} from "../domain/catalog-guard";
 import { ORDER_STATES } from "../domain/states";
 import {
   attachSession,
@@ -42,9 +45,20 @@ export async function beginCheckout(
   locale: "fr" | "en" | "de",
 ) {
   const env = requireCommerceEnv();
-  let quote: ReturnType<typeof quoteCart>;
   try {
-    quote = quoteCart(input.items, input.country);
+    const items = cartSchema.min(1).parse(input.items);
+    const lamps = items.reduce(
+      (sum, item) =>
+        sum +
+        FINISHES.reduce(
+          (count, finish) => count + item.composition[finish],
+          0,
+        ) *
+          item.quantity,
+      0,
+    );
+    if (lamps < 1 || lamps > 30) throw new Error("Invalid physical quantity");
+    shippingCents(input.country);
   } catch {
     throw new CheckoutError("invalid");
   }
@@ -79,6 +93,17 @@ export async function beginCheckout(
     getOrderItemSnapshots(order.id),
     getReservedFinishQuantities(order.id),
   ]);
+  let quote: ReturnType<typeof quoteCart>;
+  try {
+    quote = quoteCart(
+      input.items,
+      input.country,
+      packsFromSnapshots(snapshots, lumizaProduct.packs),
+    );
+  } catch {
+    if (order.status === ORDER_STATES.creating) await failSession(order.id);
+    throw new CheckoutError("unavailable");
+  }
   if (
     !snapshotsMatchQuote(snapshots, quote) ||
     FINISHES.some(
@@ -89,7 +114,7 @@ export async function beginCheckout(
     order.shipping_cents !== quote.shippingCents ||
     order.shipping_country !== input.country
   ) {
-    // Catalog seed and source code have drifted. Never charge an inconsistent amount.
+    // Never charge an amount inconsistent with the reserved order snapshots.
     if (order.status === ORDER_STATES.creating) await failSession(order.id);
     throw new CheckoutError("unavailable");
   }

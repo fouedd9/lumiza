@@ -115,6 +115,7 @@ describe("checkout session route", () => {
           body: JSON.stringify({
             ...requestBody,
             country,
+            priceCents: 1,
             shippingCents: 0,
             totalCents: 1,
           }),

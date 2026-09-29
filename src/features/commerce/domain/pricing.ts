@@ -1,4 +1,5 @@
 import { lumizaProduct } from "@/features/product/data/product";
+import type { ProductPack } from "@/features/product/types/product";
 
 import {
   cartSchema,
@@ -11,12 +12,14 @@ import { shippingCents, type ShippingCountry } from "./shipping";
 export { shippingCents } from "./shipping";
 export type { ShippingCountry } from "./shipping";
 
-export function quoteCart(items: CartItem[], country: ShippingCountry) {
+export function quoteCart(
+  items: CartItem[],
+  country: ShippingCountry,
+  packs: readonly ProductPack[],
+) {
   const parsed = cartSchema.min(1).parse(items);
   const lines = parsed.map((item) => {
-    const pack = lumizaProduct.packs.find(
-      (candidate) => candidate.id === item.packId,
-    );
+    const pack = packs.find((candidate) => candidate.id === item.packId);
     if (
       !pack ||
       FINISHES.some(

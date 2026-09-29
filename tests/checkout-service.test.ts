@@ -31,6 +31,7 @@ import {
 } from "@/features/commerce/repositories/commerce-repository";
 import { processCurrentSession } from "@/features/commerce/services/payment-events";
 import { stripeClient } from "@/features/commerce/stripe/client";
+import { solidComposition } from "@/features/commerce/schemas/cart";
 import {
   beginCheckout,
   CheckoutError,
@@ -132,6 +133,57 @@ describe("checkout service", () => {
     expect(attachSession).toHaveBeenCalledOnce();
   });
 
+  it.each([
+    ["solo", 1, 4499],
+    ["duo", 2, 7999],
+    ["pro", 10, 34999],
+  ] as const)(
+    "uses the reserved %s snapshot at %i lamps / %i cents for Stripe",
+    async (packId, size, currentPrice) => {
+      vi.mocked(reserveCheckout).mockResolvedValue({
+        ...order,
+        subtotal_cents: currentPrice,
+        total_cents: currentPrice,
+      } as never);
+      vi.mocked(getOrderItemSnapshots).mockResolvedValue([
+        {
+          quantity: 1,
+          unit_quantity: size,
+          unit_price_cents: currentPrice,
+          total_price_cents: currentPrice,
+          packs: { code: packId },
+          product_variants: null,
+          composition: solidComposition("black", size),
+        },
+      ]);
+      vi.mocked(getReservedFinishQuantities).mockResolvedValue({
+        black: size,
+        gold: 0,
+        silver: 0,
+      });
+      const selection = {
+        ...input,
+        items: [
+          {
+            packId,
+            composition: solidComposition("black", size),
+            quantity: 1,
+          },
+        ],
+      };
+
+      const result = await beginCheckout(selection, "fr");
+
+      expect(result.quote.subtotalCents).toBe(currentPrice);
+      expect(result.quote.totalCents).toBe(currentPrice);
+      expect(
+        createSession.mock.calls[0][0].line_items[0].price_data.unit_amount,
+      ).toBe(currentPrice);
+      expect(failSession).not.toHaveBeenCalled();
+      expect(attachSession).toHaveBeenCalledOnce();
+    },
+  );
+
   it("accepts a matching LIVE session when explicitly configured for LIVE", async () => {
     vi.mocked(requireCommerceEnv).mockReturnValue({
       NEXT_PUBLIC_SITE_URL: "https://shop.example.com",
@@ -212,6 +264,31 @@ describe("checkout service", () => {
     await expect(beginCheckout(input, "de")).rejects.toMatchObject({
       reason: "unavailable",
     } satisfies Partial<CheckoutError>);
+    expect(failSession).toHaveBeenCalledWith(order.id);
+    expect(createSession).not.toHaveBeenCalled();
+  });
+
+  it("releases a new reservation when its order total disagrees with the current snapshot price", async () => {
+    vi.mocked(reserveCheckout).mockResolvedValue({
+      ...order,
+      subtotal_cents: 3499,
+      total_cents: 3499,
+    } as never);
+    vi.mocked(getOrderItemSnapshots).mockResolvedValue([
+      {
+        quantity: 1,
+        unit_quantity: 1,
+        unit_price_cents: 4499,
+        total_price_cents: 4499,
+        packs: { code: "solo" },
+        product_variants: null,
+        composition: { black: 1, gold: 0, silver: 0 },
+      },
+    ]);
+
+    await expect(beginCheckout(input, "fr")).rejects.toMatchObject({
+      reason: "unavailable",
+    });
     expect(failSession).toHaveBeenCalledWith(order.id);
     expect(createSession).not.toHaveBeenCalled();
   });

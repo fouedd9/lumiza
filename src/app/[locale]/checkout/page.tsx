@@ -33,7 +33,7 @@ export default async function CheckoutPage({
   const parsed = getCommerceEnv();
   const catalog = await getPurchaseCatalog();
   return (
-    <section className="py-12 sm:py-20">
+    <section data-clarity-mask="true" className="py-12 sm:py-20">
       <Container>
         <p className="text-primary text-xs font-bold tracking-[0.18em] uppercase">
           {t("eyebrow")}

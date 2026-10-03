@@ -359,7 +359,7 @@
         },
         "sharing": {
           "title": "Prestataires et droits",
-          "body": "Supabase héberge les données de commande et Stripe traite les paiements. Un contact pour la confidentialité, une durée de conservation et une procédure de demande doivent être définis avant la production. Aucun outil d'analyse ou de publicité n'est actuellement activé."
+          "body": "Supabase héberge les données de commande et Stripe traite les paiements. Avec votre accord, Google Analytics et Microsoft Clarity servent à analyser l'utilisation du site, et Meta Pixel relève du choix Marketing. Clarity peut enregistrer les interactions sur les pages publiques ; il n'est pas chargé sur les pages de paiement et de confirmation."
         }
       }
     },
@@ -425,7 +425,7 @@
         },
         "optional": {
           "title": "Catégories facultatives",
-          "body": "L'analyse et le marketing sont désactivés par défaut. Aucun outil d'analyse, Meta Pixel, Meta CAPI ou autre script marketing n'est installé. Tout futur script facultatif devra vérifier votre choix avant de se charger."
+          "body": "L'analyse et le marketing sont désactivés par défaut. Avec votre accord Analyse, Google Analytics et Microsoft Clarity peuvent mesurer l'utilisation des pages publiques du site ; Clarity peut utiliser des cookies et enregistrer les interactions. Meta Pixel est lié au choix Marketing. Clarity n'est pas chargé sur les pages de paiement et de confirmation. Vous pouvez modifier ces choix à tout moment."
         },
         "control": {
           "title": "Vos choix",

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import { Link } from "@/i18n/navigation";
 import { formatCurrency } from "@/lib/utils/format-currency";
 import type {
   ProductPack,
@@ -168,12 +167,12 @@ export function CartShop({
             <p className="font-bold">
               {labels.subtotal}: {formatCurrency(subtotal, "EUR", locale)}
             </p>
-            <Link
-              href="/checkout"
+            <a
+              href={`/${locale}/checkout`}
               className="bg-accent text-accent-foreground inline-flex min-h-11 items-center rounded-full px-6 font-bold"
             >
               {labels.checkout} →
-            </Link>
+            </a>
           </div>
           <p className="mt-3 text-sm text-white/60">{labels.max}</p>
         </div>

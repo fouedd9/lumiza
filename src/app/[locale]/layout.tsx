@@ -10,6 +10,7 @@ import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { GoogleAnalytics } from "@/features/analytics/google-analytics";
 import { MetaPixelProvider } from "@/features/analytics/meta-pixel-provider";
+import { MicrosoftClarity } from "@/features/analytics/microsoft-clarity";
 import { ConsentManager } from "@/features/consent/consent-manager";
 import { WhatsAppContact } from "@/components/contact/whatsapp-contact";
 import { getCanonicalSiteUrl } from "@/config/site";
@@ -144,6 +145,13 @@ export default async function LocaleLayout({
             />
             <MetaPixelProvider
               pixelId={process.env.NEXT_PUBLIC_META_PIXEL_ID}
+            />
+            <MicrosoftClarity
+              projectId={process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID}
+              production={
+                process.env.NODE_ENV === "production" &&
+                process.env.VERCEL_ENV === "production"
+              }
             />
             <Header />
             <main>{children}</main>

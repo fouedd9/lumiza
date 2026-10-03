@@ -359,7 +359,7 @@
         },
         "sharing": {
           "title": "Service providers and rights",
-          "body": "Supabase supports order data storage and Stripe processes payments. A verified privacy contact, retention schedule and procedure for privacy requests must be defined before production. No analytics or marketing tracker is currently enabled."
+          "body": "Supabase stores order data and Stripe processes payments. With your permission, Google Analytics and Microsoft Clarity help analyse site use, while Meta Pixel follows the Marketing choice. Clarity may record interactions on public pages; it is not loaded on checkout or confirmation pages."
         }
       }
     },
@@ -425,7 +425,7 @@
         },
         "optional": {
           "title": "Optional categories",
-          "body": "Analytics and marketing both start switched off. No analytics, Meta Pixel, Meta CAPI or other marketing script has been installed. Future optional scripts must check your choice before loading."
+          "body": "Analytics and marketing are off by default. With your Analytics permission, Google Analytics and Microsoft Clarity may measure use of public site pages; Clarity may use cookies and record interactions. Meta Pixel follows the Marketing choice. Clarity is not loaded on checkout or confirmation pages. You can change these choices at any time."
         },
         "control": {
           "title": "Your control",

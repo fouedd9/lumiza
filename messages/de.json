@@ -359,7 +359,7 @@
         },
         "sharing": {
           "title": "Dienstleister und Rechte",
-          "body": "Supabase unterstützt die Speicherung von Bestelldaten und Stripe verarbeitet Zahlungen. Ein verifizierter Datenschutzkontakt, Aufbewahrungsfristen und ein Verfahren für Anfragen müssen vor Produktionsbeginn festgelegt werden. Analyse- oder Werbetracking ist derzeit nicht aktiv."
+          "body": "Supabase speichert Bestelldaten und Stripe verarbeitet Zahlungen. Mit Ihrer Einwilligung helfen Google Analytics und Microsoft Clarity bei der Analyse der Websitenutzung; Meta Pixel folgt der Marketing-Auswahl. Clarity kann Interaktionen auf öffentlichen Seiten aufzeichnen und wird auf Kassen- und Bestätigungsseiten nicht geladen."
         }
       }
     },
@@ -425,7 +425,7 @@
         },
         "optional": {
           "title": "Optionale Kategorien",
-          "body": "Analyse und Marketing sind standardmäßig ausgeschaltet. Google Analytics, Meta Pixel, Meta CAPI und andere Marketingskripte sind nicht installiert. Zukünftige optionale Skripte müssen die Entscheidung vor dem Laden prüfen."
+          "body": "Analyse und Marketing sind standardmäßig deaktiviert. Mit Ihrer Analyse-Einwilligung können Google Analytics und Microsoft Clarity die Nutzung öffentlicher Seiten messen; Clarity kann Cookies verwenden und Interaktionen aufzeichnen. Meta Pixel folgt der Marketing-Auswahl. Clarity wird auf Kassen- und Bestätigungsseiten nicht geladen. Sie können Ihre Auswahl jederzeit ändern."
         },
         "control": {
           "title": "Ihre Wahl",

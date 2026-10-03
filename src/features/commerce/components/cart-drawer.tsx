@@ -11,7 +11,6 @@ import type {
   ProductColor,
   ProductPack,
 } from "@/features/product/types/product";
-import { Link } from "@/i18n/navigation";
 import type { AppLocale } from "@/i18n/routing";
 import { formatCurrency } from "@/lib/utils/format-currency";
 import { cartLineKey, FINISHES } from "../schemas/cart";
@@ -334,13 +333,13 @@ export function CartDrawer({
           items.every((item) =>
             packs.some((pack) => pack.id === item.packId),
           ) ? (
-            <Link
-              href="/checkout"
+            <a
+              href={`/${locale}/checkout`}
               onClick={closeCart}
               className="bg-primary text-primary-foreground focus-visible:outline-foreground mt-6 flex min-h-12 items-center justify-center rounded-full px-5 font-extrabold focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               {labels.checkout} →
-            </Link>
+            </a>
           ) : null}
           <button
             type="button"

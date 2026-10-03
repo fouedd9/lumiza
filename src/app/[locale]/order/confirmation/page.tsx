@@ -45,7 +45,7 @@ export default async function ConfirmationPage({
   const titleKey = `${result.state}Title` as const;
   const bodyKey = `${result.state}Body` as const;
   return (
-    <section className="py-20 sm:py-32">
+    <section data-clarity-mask="true" className="py-20 sm:py-32">
       {result.state === "paid" &&
       result.reference &&
       result.subtotalInCents !== undefined &&

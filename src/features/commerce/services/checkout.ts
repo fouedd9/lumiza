@@ -215,6 +215,7 @@ export async function beginCheckout(
           quantity: line.quantity,
         })),
         shipping_address_collection: { allowed_countries: [input.country] },
+        phone_number_collection: { enabled: true },
         shipping_options: [
           {
             shipping_rate_data: {

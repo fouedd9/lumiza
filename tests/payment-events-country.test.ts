@@ -7,6 +7,7 @@ vi.mock("@/config/commerce-env.server", () => ({
 
 vi.mock("@/features/commerce/repositories/commerce-repository", () => ({
   processPaymentEvent: vi.fn(),
+  captureCustomerPhone: vi.fn(),
   enqueuePaidEmail: vi.fn(),
 }));
 vi.mock("@/features/telegram/paid-order-notification.server", () => ({
@@ -14,6 +15,7 @@ vi.mock("@/features/telegram/paid-order-notification.server", () => ({
 }));
 
 import {
+  captureCustomerPhone,
   enqueuePaidEmail,
   processPaymentEvent,
 } from "@/features/commerce/repositories/commerce-repository";
@@ -61,6 +63,65 @@ describe("Stripe shipping-country reconciliation", () => {
     );
     expect(enqueuePaidEmail).toHaveBeenCalledWith("cs_test_country");
     expect(notifyNewPaidOrder).toHaveBeenCalledOnce();
+    expect(captureCustomerPhone).not.toHaveBeenCalled();
+  });
+
+  it("persists the Stripe Checkout phone only after a paid session is processed", async () => {
+    const paid = {
+      ...session("FR", "FR"),
+      customer_details: { phone: "+33 6 12 34 56 78" },
+    } as Stripe.Checkout.Session;
+    await processCurrentSession(
+      paid,
+      "event-phone",
+      "checkout.session.completed",
+    );
+    expect(processPaymentEvent).toHaveBeenCalledOnce();
+    expect(captureCustomerPhone).toHaveBeenCalledWith(
+      "cs_test_country",
+      "+33 6 12 34 56 78",
+    );
+    expect(
+      vi.mocked(processPaymentEvent).mock.invocationCallOrder[0],
+    ).toBeLessThan(vi.mocked(captureCustomerPhone).mock.invocationCallOrder[0]);
+  });
+
+  it("does not persist a phone for an unpaid session", async () => {
+    const unpaid = {
+      ...session("FR", "FR"),
+      payment_status: "unpaid",
+      customer_details: { phone: "+33 6 12 34 56 78" },
+    } as Stripe.Checkout.Session;
+    await processCurrentSession(
+      unpaid,
+      "event-unpaid-phone",
+      "checkout.session.completed",
+    );
+    expect(captureCustomerPhone).not.toHaveBeenCalled();
+  });
+
+  it("retries a failed phone write on a replay without undoing the paid flow", async () => {
+    const paid = {
+      ...session("FR", "FR"),
+      customer_details: { phone: "+33 6 12 34 56 78" },
+    } as Stripe.Checkout.Session;
+    vi.mocked(processPaymentEvent)
+      .mockResolvedValueOnce("processed" as never)
+      .mockResolvedValueOnce("duplicate" as never);
+    vi.mocked(captureCustomerPhone).mockRejectedValueOnce(
+      new Error("Phone write unavailable"),
+    );
+
+    await expect(
+      processCurrentSession(paid, "event-phone", "checkout.session.completed"),
+    ).rejects.toThrow("Phone write unavailable");
+    expect(enqueuePaidEmail).toHaveBeenCalledOnce();
+    expect(notifyNewPaidOrder).toHaveBeenCalledOnce();
+
+    await expect(
+      processCurrentSession(paid, "event-phone", "checkout.session.completed"),
+    ).resolves.toBe("duplicate");
+    expect(captureCustomerPhone).toHaveBeenCalledTimes(2);
   });
 
   it("rejects a different final shipping country before processing payment", async () => {

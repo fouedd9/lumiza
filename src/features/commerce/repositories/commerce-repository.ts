@@ -207,6 +207,14 @@ export async function processPaymentEvent(input: {
   return unwrap(result);
 }
 
+export async function captureCustomerPhone(sessionId: string, phone: string) {
+  const result = await client().rpc("commerce_capture_customer_phone", {
+    p_session: sessionId,
+    p_phone: phone,
+  });
+  if (result.error) throw new Error(result.error.message);
+}
+
 export async function listReconciliationCandidates() {
   const result = await client()
     .from("orders")

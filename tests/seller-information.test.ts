@@ -1,4 +1,6 @@
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 
 import de from "@/../messages/de.json";
 import en from "@/../messages/en.json";
@@ -80,6 +82,24 @@ describe("configured CGV seller information", () => {
       expect(messages.Legal.shippingReturns.sections.timing.body).toContain(
         "{max}",
       );
+    }
+  });
+
+  it("keeps Shipping and Returns customer-facing without altering other legal notices", () => {
+    const page = readFileSync(
+      resolve("src/components/legal/legal-page.tsx"),
+      "utf8",
+    );
+    expect(page).toContain('kind === "legal" || kind === "terms" ? (');
+    expect(page).toContain('kind === "shippingReturns"');
+    for (const messages of [fr, en, de]) {
+      const copy = messages.Legal.shippingReturns;
+      expect(JSON.stringify(copy)).not.toMatch(
+        /before (?:production|sales)|avant (?:la production|les ventes)|vor (?:dem Produktionsstart|produktiven Verkäufen)/i,
+      );
+      expect(copy.sections.timing.body).toContain("{min}");
+      expect(copy.sections.timing.body).toContain("{max}");
+      expect(copy.switzerlandFacts).toBeTruthy();
     }
   });
 });

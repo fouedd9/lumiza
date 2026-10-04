@@ -147,7 +147,14 @@ export async function LegalPage({
                 max: commercePolicy.deliveryTimes.maxBusinessDays,
               }),
             ],
-            [t("fields.swissImportAndCustoms"), t("sellerInfo.switzerland")],
+            [
+              t("fields.swissImportAndCustoms"),
+              t(
+                kind === "shippingReturns"
+                  ? "shippingReturns.switzerlandFacts"
+                  : "sellerInfo.switzerland",
+              ),
+            ],
           ]
         : kind === "privacy"
           ? [
@@ -168,7 +175,7 @@ export async function LegalPage({
         <p className="text-muted-foreground mt-6 max-w-3xl leading-7">
           {copy.introduction}
         </p>
-        {kind === "legal" || kind === "terms" || kind === "shippingReturns" ? (
+        {kind === "legal" || kind === "terms" ? (
           <p className="border-primary/40 bg-surface-elevated mt-8 rounded-xl border p-4 text-sm">
             {t("draftNotice")}
           </p>

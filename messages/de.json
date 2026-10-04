@@ -395,7 +395,8 @@
     },
     "shippingReturns": {
       "title": "Versand und Rückgabe",
-      "introduction": "Lieferländer, Versandkosten, voraussichtliche Lieferzeiten und Rücksenderegeln stehen unten; Schweizer Einfuhrfragen sind noch zu klären.",
+      "introduction": "Hier finden Sie Lieferländer, Versandkosten, voraussichtliche Lieferzeiten und Rücksenderegeln. Bei Lieferungen in die Schweiz können Einfuhrkosten anfallen.",
+      "switzerlandFacts": "Bei Lieferungen in die Schweiz können nach den geltenden Regeln Einfuhrumsatzsteuer, Zölle oder Bearbeitungsgebühren anfallen. Etwaige Beträge hängen vom Einzelfall ab; die LUMIZA-Versandkosten bedeuten nicht, dass diese Steuern oder Zölle enthalten oder bezahlt sind.",
       "sections": {
         "destinations": {
           "title": "Länder und Versandkosten",
@@ -403,7 +404,7 @@
         },
         "timing": {
           "title": "Lieferzeiten",
-          "body": "Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen in die unterstützten Länder. Regelungen für Verzögerungen müssen vor produktiven Verkäufen geprüft werden."
+          "body": "Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen in die unterstützten Länder. Wenn sich Ihre Lieferung verzögert, wenden Sie sich bitte an den unten angegebenen Kundenservice."
         },
         "returns": {
           "title": "Rückgaben und Erstattungen",
@@ -411,7 +412,7 @@
         },
         "switzerland": {
           "title": "Schweiz",
-          "body": "Die LUMIZA-Versandkosten bestimmen weder Einfuhrumsatzsteuer noch Zölle oder mögliche Bearbeitungsgebühren. Die Kostentragung muss vor dem Produktionsstart geklärt werden; eine verzollte oder steuerinklusive Lieferung wird nicht zugesagt."
+          "body": "Bei Lieferungen in die Schweiz können Einfuhrumsatzsteuer, Zölle oder Bearbeitungsgebühren anfallen. Die angezeigten Versandkosten bedeuten nicht, dass solche Beträge enthalten oder bezahlt sind."
         }
       }
     },

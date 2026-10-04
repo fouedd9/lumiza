@@ -5,6 +5,7 @@ import { requireCommerceEnv } from "@/config/commerce-env.server";
 import { notifyNewPaidOrder } from "@/features/telegram/paid-order-notification.server";
 
 import {
+  captureCustomerPhone,
   enqueuePaidEmail,
   processPaymentEvent,
 } from "../repositories/commerce-repository";
@@ -95,6 +96,10 @@ export async function processCurrentSession(
       await notifyNewPaidOrder(session);
     } catch {
       console.error("[telegram] paid notification unavailable");
+    }
+    if (session.customer_details?.phone) {
+      // A failed phone write retries through the same idempotent webhook event.
+      await captureCustomerPhone(session.id, session.customer_details.phone);
     }
   }
   return result;

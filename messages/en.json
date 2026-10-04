@@ -395,7 +395,8 @@
     },
     "shippingReturns": {
       "title": "Shipping and returns",
-      "introduction": "Delivery destinations, charges, estimated times and return arrangements are shown below; Swiss import treatment still needs confirmation.",
+      "introduction": "Find the supported destinations, shipping charges, estimated delivery times and return arrangements below. Import charges may apply in Switzerland.",
+      "switzerlandFacts": "Delivery to Switzerland may involve import VAT, customs duties or processing charges under the applicable rules. Any amounts depend on the circumstances; LUMIZA's shipping charge does not mean that these taxes or duties are included or paid.",
       "sections": {
         "destinations": {
           "title": "Destinations and charges",
@@ -403,7 +404,7 @@
         },
         "timing": {
           "title": "Delivery times",
-          "body": "Estimated delivery within {min}–{max} business days for supported destinations. Handling of delays must be verified before production sales."
+          "body": "Estimated delivery within {min}–{max} business days for supported destinations. If your delivery is delayed, contact customer support using the details below."
         },
         "returns": {
           "title": "Returns and refunds",
@@ -411,7 +412,7 @@
         },
         "switzerland": {
           "title": "Switzerland",
-          "body": "LUMIZA's shipping charge does not determine import VAT, customs duties or potential processing charges. Who bears them must be confirmed before production; no duties-paid or taxes-included promise is made."
+          "body": "Delivery to Switzerland may involve import VAT, customs duties or processing charges. The displayed shipping charge does not mean that any such amounts are included or paid."
         }
       }
     },

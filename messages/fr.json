@@ -395,7 +395,8 @@
     },
     "shippingReturns": {
       "title": "Livraison et retours",
-      "introduction": "Les destinations, frais, délais estimés et modalités de retour figurent ci-dessous ; le traitement de l'importation suisse reste à confirmer.",
+      "introduction": "Retrouvez ci-dessous les destinations desservies, les frais de livraison, les délais estimés et les modalités de retour. Des frais d'importation peuvent s'appliquer en Suisse.",
+      "switzerlandFacts": "Une livraison en Suisse peut entraîner de la TVA à l'importation, des droits de douane ou des frais de traitement selon les règles applicables. Leur montant éventuel dépend de la situation ; les frais de livraison LUMIZA ne signifient pas que ces taxes ou droits sont inclus ou acquittés.",
       "sections": {
         "destinations": {
           "title": "Pays et frais",
@@ -403,7 +404,7 @@
         },
         "timing": {
           "title": "Délais de livraison",
-          "body": "Livraison estimée sous {min} à {max} jours ouvrés pour les destinations desservies. Les modalités en cas de retard devront être vérifiées avant les ventes de production."
+          "body": "Livraison estimée sous {min} à {max} jours ouvrés pour les destinations desservies. Si votre livraison prend du retard, contactez notre service client aux coordonnées ci-dessous."
         },
         "returns": {
           "title": "Retours et remboursements",
@@ -411,7 +412,7 @@
         },
         "switzerland": {
           "title": "Suisse",
-          "body": "Les frais de livraison LUMIZA ne déterminent pas la TVA à l'importation, les droits de douane ni les éventuels frais de traitement. Leur prise en charge doit être confirmée avant la production ; aucune promesse de taxes incluses ou de droits acquittés n'est faite."
+          "body": "Une livraison en Suisse peut donner lieu à de la TVA à l'importation, à des droits de douane ou à des frais de traitement. Les frais de livraison affichés ne signifient pas que ces montants éventuels sont inclus ou acquittés."
         }
       }
     },

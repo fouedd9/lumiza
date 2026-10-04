@@ -116,6 +116,7 @@ describe("checkout service", () => {
     expect(createSession).toHaveBeenCalledWith(
       expect.objectContaining({
         ui_mode: "embedded_page",
+        phone_number_collection: { enabled: true },
         locale: "de",
         mode: "payment",
         line_items: [

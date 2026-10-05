@@ -1,0 +1,60 @@
+.track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 88%;
+  gap: 1rem;
+  margin: 0;
+  padding: 4px 0 1.25rem;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.track > li {
+  scroll-snap-align: start;
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface-elevated);
+  color: var(--foreground);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.arrow:disabled {
+  opacity: 0.35;
+}
+.arrow:focus-visible,
+.track:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (min-width: 640px) {
+  .track {
+    grid-auto-columns: calc((100% - 1.5rem) / 2);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .track {
+    grid-auto-columns: calc((100% - 3rem) / 3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    scroll-behavior: auto;
+  }
+}

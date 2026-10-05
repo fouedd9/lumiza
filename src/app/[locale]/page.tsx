@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FinalCtaSection } from "@/components/sections/final-cta-section";
 import { HeroSection } from "@/components/sections/hero-section";
+import { ReviewsSection } from "@/components/sections/reviews-section";
 import { UseCasesSection } from "@/components/sections/use-cases-section";
 import { ProductBenefits } from "@/features/product/components/product-benefits";
 import { ProductStructuredData } from "@/features/product/components/product-structured-data";
@@ -32,6 +33,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <ProductBenefits locale={locale} />
       <UseCasesSection locale={locale} />
       <FaqSection locale={locale} />
+      <ReviewsSection locale={locale} />
       <FinalCtaSection locale={locale} />
     </>
   );

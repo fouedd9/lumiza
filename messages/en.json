@@ -459,5 +459,43 @@
     "greeting": "Thank you for your LUMIZA order.",
     "reference": "Order reference",
     "supportPending": "Support contact details will be provided before launch."
+  },
+  "Reviews": {
+    "eyebrow": "BUYER REVIEWS",
+    "title": "Already at home in their lives.",
+    "description": "Discover what buyers think of this lamp model.",
+    "country": "France",
+    "verified": "Verified purchase",
+    "rating": "5 out of 5 stars",
+    "previous": "Previous review",
+    "next": "Next review",
+    "carousel": "Buyer reviews of this model",
+    "instructions": "Swipe through the reviews or use the buttons or arrow keys.",
+    "items": {
+      "pat": {
+        "title": "Good-quality product",
+        "text": "A good-quality product that matches the descriptions. Works very well and has good battery life once charged. I’m very satisfied with it."
+      },
+      "stephane": {
+        "title": "Pretty and practical!!",
+        "text": "A beautiful lamp, modern, practical and very pretty. Everyone loves it!!"
+      },
+      "jerome": {
+        "title": "Quality as expected",
+        "text": "Touch controls OK. 3 light tones. Quality as expected, battery lasts quite a while."
+      },
+      "norbert": {
+        "title": "Very good",
+        "text": "Very good, especially the absence of a cord, which often gets in the way with conventional lamps."
+      },
+      "boyer": {
+        "title": "Multi-function",
+        "text": "I love it!! I saw it during an evening at friends’ and was won over. With its 3 mood-lighting colours, the lamp has plenty of charm!!"
+      },
+      "chris": {
+        "title": "Attractive and functional",
+        "text": "I’ve only had this product for 2 days and I find it attractive and very functional, with its light temperature and brightness settings."
+      }
+    }
   }
 }

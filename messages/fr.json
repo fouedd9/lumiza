@@ -459,5 +459,44 @@
     "greeting": "Merci pour votre commande LUMIZA.",
     "reference": "Référence de commande",
     "supportPending": "Les coordonnées d'assistance seront communiquées avant le lancement."
+  },
+  "Reviews": {
+    "eyebrow": "AVIS ACHETEURS",
+    "title": "Ils l’ont déjà adoptée.",
+    "description": "Découvrez ce que pensent les acheteurs de ce modèle.",
+
+    "country": "France",
+    "verified": "Achat vérifié",
+    "rating": "5 étoiles sur 5",
+    "previous": "Avis précédent",
+    "next": "Avis suivant",
+    "carousel": "Avis acheteurs de ce modèle",
+    "instructions": "Faites défiler les avis avec un geste, les flèches ou votre clavier.",
+    "items": {
+      "pat": {
+        "title": "Produit de bonne qualité",
+        "text": "Produit de bonne qualité et conforme aux descriptions. Fonctionne très bien et bonne autonomie une fois chargée. J’en suis très satisfait."
+      },
+      "stephane": {
+        "title": "Jolie et pratique !!",
+        "text": "Magnifique lampe, moderne, pratique et très jolie. Tout le monde l’adore !!"
+      },
+      "jerome": {
+        "title": "Qualité au rdv",
+        "text": "Tactile OK. 3 teintes de lumières. Qualité au rdv, batterie plutôt longue."
+      },
+      "norbert": {
+        "title": "Très bien",
+        "text": "Très bien surtout l’absence de fil qui gêne souvent avec les lampes classique."
+      },
+      "boyer": {
+        "title": "Multi-fonction",
+        "text": "J’adore..!! Vue lors d’une soirée chez des amis, j’ai été conquise. Avec ses 3 couleurs d’ambiance, la lampe a plein de charme !!"
+      },
+      "chris": {
+        "title": "Joli et fonctionnel",
+        "text": "Je n’ai ce produit que depuis 2 jours et je le trouve joli et très fonctionnel avec ses réglages de température de lumière et d’intensité."
+      }
+    }
   }
 }

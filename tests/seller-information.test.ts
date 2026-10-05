@@ -85,12 +85,12 @@ describe("configured CGV seller information", () => {
     }
   });
 
-  it("keeps Shipping and Returns customer-facing without altering other legal notices", () => {
+  it("keeps Shipping and Returns customer-facing and the draft notice limited to Legal", () => {
     const page = readFileSync(
       resolve("src/components/legal/legal-page.tsx"),
       "utf8",
     );
-    expect(page).toContain('kind === "legal" || kind === "terms" ? (');
+    expect(page).toContain('kind === "legal" ? (');
     expect(page).toContain('kind === "shippingReturns"');
     for (const messages of [fr, en, de]) {
       const copy = messages.Legal.shippingReturns;

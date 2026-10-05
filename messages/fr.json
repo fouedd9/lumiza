@@ -187,7 +187,9 @@
     "facebook": "Facebook LUMIZA",
     "instagram": "Instagram LUMIZA",
     "securePayment": "Paiement sécurisé",
-    "cardPayment": "Carte bancaire"
+    "cardPayment": "Carte bancaire",
+    "paymentReassurance": "Paiement sécurisé par Stripe",
+    "paymentDescription": "Vos informations de paiement sont traitées de manière sécurisée."
   },
   "Purchase": {
     "brand": "LUMIZA",
@@ -343,7 +345,7 @@
     },
     "privacy": {
       "title": "Confidentialité",
-      "introduction": "Cette page décrit les catégories de données utilisées par la boutique LUMIZA actuelle. Les durées de conservation et l'identité du responsable doivent encore être confirmées.",
+      "introduction": "Cette page décrit les principales catégories de données utilisées dans le cadre de la boutique LUMIZA et de son fonctionnement.",
       "sections": {
         "orders": {
           "title": "Commandes et livraison",
@@ -361,23 +363,28 @@
           "title": "Prestataires et droits",
           "body": "Supabase héberge les données de commande et Stripe traite les paiements. Avec votre accord, Google Analytics et Microsoft Clarity servent à analyser l'utilisation du site, et Meta Pixel relève du choix Marketing. Clarity peut enregistrer les interactions sur les pages publiques ; il n'est pas chargé sur les pages de paiement et de confirmation."
         }
+      },
+      "contact": {
+        "title": "Contact et exercice de vos droits",
+        "description": "Pour toute question relative à vos données personnelles ou à l’exercice de vos droits, vous pouvez nous contacter :",
+        "email": "E-mail"
       }
     },
     "terms": {
       "title": "Conditions générales de vente",
-      "introduction": "Cette structure décrit le processus de commande actuel. Les politiques non décidées doivent être confirmées avant des ventes réelles.",
+      "introduction": "Les présentes conditions générales de vente définissent les principales modalités applicables aux commandes passées sur la boutique LUMIZA.",
       "sections": {
         "seller": {
           "title": "Vendeur et produits",
-          "body": "L'identité légale du vendeur reste à fournir. LUMIZA présente actuellement une lampe en finitions noir, or et argent avec les packs SOLO, DUO et PRO ; les caractéristiques et la disponibilité des finitions doivent être vérifiées."
+          "body": "La boutique LUMIZA propose sa lampe avec les finitions et les offres disponibles dans le catalogue. Les options proposées sont indiquées sur les pages produit et lors de la commande."
         },
         "prices": {
           "title": "Prix et paiement",
-          "body": "Les prix sont affichés en EUR. Le serveur vérifie le prix des produits et la livraison avant de créer un paiement par carte avec Stripe. Le traitement fiscal et la configuration de paiement de production restent à définir."
+          "body": "Les prix sont affichés en EUR. Le prix applicable est celui affiché au client au moment de la commande, avec les frais de livraison correspondant au pays choisi. Le paiement est effectué via Stripe. LUMIZA ne conserve pas le numéro complet de votre carte bancaire."
         },
         "ordering": {
           "title": "Commande et confirmation",
-          "body": "Le client vérifie son panier, choisit un pays de livraison autorisé et renseigne les données de paiement et de livraison dans Stripe. Une commande n'est confirmée qu'après enregistrement du paiement ; une page privée affiche la référence."
+          "body": "Le client choisit son offre et les options proposées, vérifie son panier, sélectionne son pays de livraison parmi les pays disponibles et renseigne les informations demandées. Le paiement est effectué via Stripe. Lorsque le paiement est validé, une page de confirmation affiche la référence de commande."
         },
         "delivery": {
           "title": "Livraison",
@@ -388,9 +395,12 @@
           "body": "Le droit de rétractation, la procédure de retour et le remboursement sont précisés ci-dessous. Les droits relatifs aux produits défectueux ou non conformes restent distincts ; aucune garantie commerciale supplémentaire n'est promise."
         },
         "disputes": {
-          "title": "Assistance et litiges",
-          "body": "Le contact du service client figure ci-dessous. Les informations applicables à la résolution des litiges restent à compléter avant le lancement. Aucune limitation de responsabilité n'est adoptée dans ce brouillon."
+          "title": "Assistance et contact",
+          "body": "Pour toute question concernant votre commande, une livraison ou un retour, vous pouvez contacter LUMIZA par les moyens suivants :"
         }
+      },
+      "contact": {
+        "email": "E-mail"
       }
     },
     "shippingReturns": {

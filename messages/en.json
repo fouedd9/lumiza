@@ -187,7 +187,9 @@
     "facebook": "LUMIZA on Facebook",
     "instagram": "LUMIZA on Instagram",
     "securePayment": "Secure payment",
-    "cardPayment": "Card"
+    "cardPayment": "Card",
+    "paymentReassurance": "Secure payments with Stripe",
+    "paymentDescription": "Your payment information is processed securely."
   },
   "Purchase": {
     "brand": "LUMIZA",
@@ -343,7 +345,7 @@
     },
     "privacy": {
       "title": "Privacy",
-      "introduction": "This page describes the data categories used by the current LUMIZA checkout and website. Retention periods and the controller's identity still need confirmation.",
+      "introduction": "This page describes the main categories of data used by the LUMIZA shop and how they support its operation.",
       "sections": {
         "orders": {
           "title": "Orders and delivery",
@@ -361,23 +363,28 @@
           "title": "Service providers and rights",
           "body": "Supabase stores order data and Stripe processes payments. With your permission, Google Analytics and Microsoft Clarity help analyse site use, while Meta Pixel follows the Marketing choice. Clarity may record interactions on public pages; it is not loaded on checkout or confirmation pages."
         }
+      },
+      "contact": {
+        "title": "Contact and exercising your rights",
+        "description": "If you have any questions about your personal data or wish to exercise your rights, you can contact us:",
+        "email": "Email"
       }
     },
     "terms": {
       "title": "Terms and conditions",
-      "introduction": "The structure below explains the current ordering flow. Undecided seller policies must be confirmed before these terms can govern real sales.",
+      "introduction": "These terms and conditions set out the main conditions applicable to orders placed through the LUMIZA shop.",
       "sections": {
         "seller": {
           "title": "Seller and products",
-          "body": "The seller's legal identity is pending. LUMIZA currently presents one lamp in Black, Gold and Silver selections with SOLO, DUO and PRO packs; final product specifications and finish availability require verification."
+          "body": "The LUMIZA shop offers its lamp in the finishes and packages available in the catalogue. The available options are shown on the product pages and during ordering."
         },
         "prices": {
           "title": "Prices and payment",
-          "body": "Prices are displayed in EUR. The server verifies the product price and shipping charge before creating a card checkout with Stripe. Tax treatment and production payment configuration remain to be decided."
+          "body": "Prices are displayed in EUR. The applicable price is the one shown to the customer when placing the order, including the delivery charge for the selected country. Payment is processed through Stripe. LUMIZA does not store your full card number."
         },
         "ordering": {
           "title": "Ordering and confirmation",
-          "body": "The customer reviews the cart, selects a supported delivery country and enters payment and delivery details through Stripe. An order is confirmed only when payment is successfully recorded; a private confirmation page shows the order reference."
+          "body": "The customer chooses an offer and the available options, reviews the cart, selects a delivery country from the available destinations and provides the requested information. Payment is processed through Stripe. Once payment is validated, a confirmation page displays the order reference."
         },
         "delivery": {
           "title": "Delivery",
@@ -388,9 +395,12 @@
           "body": "The withdrawal right, return procedure and refund rules are set out below. Rights concerning defective or non-conforming goods remain separate; no additional commercial guarantee is promised."
         },
         "disputes": {
-          "title": "Support and disputes",
-          "body": "The customer-service contact appears below. Applicable dispute-resolution information still needs to be completed before launch. No liability limitation has been adopted in this draft."
+          "title": "Support and contact",
+          "body": "If you have any questions about your order, delivery or a return, you can contact LUMIZA using the following channels:"
         }
+      },
+      "contact": {
+        "email": "Email"
       }
     },
     "shippingReturns": {

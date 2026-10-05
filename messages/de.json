@@ -187,7 +187,9 @@
     "facebook": "LUMIZA auf Facebook",
     "instagram": "LUMIZA auf Instagram",
     "securePayment": "Sichere Zahlung",
-    "cardPayment": "Kartenzahlung"
+    "cardPayment": "Kartenzahlung",
+    "paymentReassurance": "Sichere Zahlung über Stripe",
+    "paymentDescription": "Ihre Zahlungsinformationen werden sicher verarbeitet."
   },
   "Purchase": {
     "brand": "LUMIZA",
@@ -343,7 +345,7 @@
     },
     "privacy": {
       "title": "Datenschutz",
-      "introduction": "Diese Seite beschreibt die Datenkategorien des derzeitigen LUMIZA-Shops. Aufbewahrungsfristen und die Identität des Verantwortlichen müssen noch bestätigt werden.",
+      "introduction": "Diese Seite beschreibt die wichtigsten Datenkategorien, die im LUMIZA-Shop und für seinen Betrieb verwendet werden.",
       "sections": {
         "orders": {
           "title": "Bestellungen und Lieferung",
@@ -361,23 +363,28 @@
           "title": "Dienstleister und Rechte",
           "body": "Supabase speichert Bestelldaten und Stripe verarbeitet Zahlungen. Mit Ihrer Einwilligung helfen Google Analytics und Microsoft Clarity bei der Analyse der Websitenutzung; Meta Pixel folgt der Marketing-Auswahl. Clarity kann Interaktionen auf öffentlichen Seiten aufzeichnen und wird auf Kassen- und Bestätigungsseiten nicht geladen."
         }
+      },
+      "contact": {
+        "title": "Kontakt und Ausübung Ihrer Rechte",
+        "description": "Bei Fragen zu Ihren personenbezogenen Daten oder zur Ausübung Ihrer Rechte können Sie uns kontaktieren:",
+        "email": "E-Mail"
       }
     },
     "terms": {
       "title": "Allgemeine Geschäftsbedingungen",
-      "introduction": "Diese Struktur erläutert den aktuellen Bestellablauf. Offene Händlerregeln müssen vor echten Verkäufen bestätigt werden.",
+      "introduction": "Diese Allgemeinen Geschäftsbedingungen beschreiben die wesentlichen Bedingungen für Bestellungen im LUMIZA-Shop.",
       "sections": {
         "seller": {
           "title": "Verkäufer und Produkte",
-          "body": "Die rechtliche Identität des Verkäufers steht noch aus. LUMIZA zeigt derzeit eine Leuchte in Schwarz, Gold und Silber mit SOLO-, DUO- und PRO-Paketen; endgültige Produkteigenschaften und Verfügbarkeit müssen geprüft werden."
+          "body": "Der LUMIZA-Shop bietet seine Leuchte in den im Katalog verfügbaren Ausführungen und Paketen an. Die angebotenen Optionen werden auf den Produktseiten und während der Bestellung angezeigt."
         },
         "prices": {
           "title": "Preise und Zahlung",
-          "body": "Preise werden in EUR angezeigt. Der Server prüft Produktpreis und Versandkosten vor Erstellung einer Kartenzahlung mit Stripe. Steuerbehandlung und produktive Zahlungskonfiguration sind noch festzulegen."
+          "body": "Die Preise werden in EUR angezeigt. Es gilt der Preis, der dem Kunden bei der Bestellung angezeigt wird, einschließlich der Versandkosten für das gewählte Land. Die Zahlung wird über Stripe abgewickelt. LUMIZA speichert Ihre vollständige Kartennummer nicht."
         },
         "ordering": {
           "title": "Bestellung und Bestätigung",
-          "body": "Kunden prüfen den Warenkorb, wählen ein unterstütztes Lieferland und geben Zahlungs- und Lieferangaben bei Stripe ein. Eine Bestellung gilt erst nach verbuchter Zahlung als bestätigt; eine private Seite zeigt die Bestellreferenz."
+          "body": "Der Kunde wählt ein Angebot und die verfügbaren Optionen, prüft seinen Warenkorb, wählt ein Lieferland aus den verfügbaren Ländern und gibt die angeforderten Informationen an. Die Zahlung wird über Stripe abgewickelt. Nach erfolgreicher Bestätigung der Zahlung wird die Bestellreferenz auf einer Bestätigungsseite angezeigt."
         },
         "delivery": {
           "title": "Lieferung",
@@ -388,9 +395,12 @@
           "body": "Widerrufsrecht, Rücksendeverfahren und Erstattung sind unten beschrieben. Rechte bei mangelhafter oder nicht vertragsgemäßer Ware bleiben davon unberührt; eine zusätzliche freiwillige Garantie wird nicht zugesagt."
         },
         "disputes": {
-          "title": "Service und Streitfälle",
-          "body": "Der Kontakt zum Kundenservice steht unten. Informationen zur anwendbaren Streitbeilegung müssen vor dem Start noch ergänzt werden. Dieser Entwurf enthält keine Haftungsbegrenzung."
+          "title": "Service und Kontakt",
+          "body": "Bei Fragen zu Ihrer Bestellung, Lieferung oder Rücksendung können Sie LUMIZA über die folgenden Kontaktmöglichkeiten erreichen:"
         }
+      },
+      "contact": {
+        "email": "E-Mail"
       }
     },
     "shippingReturns": {

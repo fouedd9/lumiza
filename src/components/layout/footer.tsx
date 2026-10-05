@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
 import { Container } from "../ui/container";
+import { FooterPayment } from "./footer-payment";
 import { ConsentPreferencesButton } from "@/features/consent/consent-preferences-button";
 import { business } from "@/config/business";
 import { socialLinks } from "@/config/social";
@@ -124,23 +125,11 @@ export async function Footer() {
               t("contactPending")
             )}
           </p>
-          <div className="border-border mt-6 border-t pt-5">
-            <p className="text-foreground font-bold">{t("securePayment")}</p>
-            <div className="border-border text-foreground mt-3 inline-flex items-center gap-2 rounded-md border px-3 py-2">
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                className="size-5 shrink-0"
-              >
-                <rect x="2.5" y="5" width="19" height="14" rx="2" />
-                <path d="M2.5 9h19M6 15h4" />
-              </svg>
-              <span>{t("cardPayment")}</span>
-            </div>
-          </div>
+          <FooterPayment
+            title={t("securePayment")}
+            reassurance={t("paymentReassurance")}
+            description={t("paymentDescription")}
+          />
         </div>
       </Container>
       <Container className="border-border text-muted-foreground mt-10 border-t pt-6 text-xs">

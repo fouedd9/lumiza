@@ -7,6 +7,8 @@ import { business, commercePolicy } from "@/config/business";
 import { getCanonicalSiteUrl } from "@/config/site";
 import { routing } from "@/i18n/routing";
 import { Container } from "@/components/ui/container";
+import { PrivacyContact } from "./privacy-contact";
+import { TermsContact } from "./terms-contact";
 import {
   ENABLED_COUNTRIES,
   shippingCents,
@@ -149,19 +151,10 @@ export async function LegalPage({
             ],
             [
               t("fields.swissImportAndCustoms"),
-              t(
-                kind === "shippingReturns"
-                  ? "shippingReturns.switzerlandFacts"
-                  : "sellerInfo.switzerland",
-              ),
+              t("shippingReturns.switzerlandFacts"),
             ],
           ]
-        : kind === "privacy"
-          ? [
-              [t("fields.privacyRetention"), commercePolicy.privacyRetention],
-              [t("fields.contactEmail"), business.contactEmail],
-            ]
-          : [];
+        : [];
 
   return (
     <article className="py-16 sm:py-24">
@@ -175,7 +168,7 @@ export async function LegalPage({
         <p className="text-muted-foreground mt-6 max-w-3xl leading-7">
           {copy.introduction}
         </p>
-        {kind === "legal" || kind === "terms" ? (
+        {kind === "legal" ? (
           <p className="border-primary/40 bg-surface-elevated mt-8 rounded-xl border p-4 text-sm">
             {t("draftNotice")}
           </p>
@@ -202,8 +195,12 @@ export async function LegalPage({
                       })
                     : section.body}
               </p>
+              {kind === "terms" && key === "disputes" ? (
+                <TermsContact locale={locale} />
+              ) : null}
             </section>
           ))}
+          {kind === "privacy" ? <PrivacyContact locale={locale} /> : null}
           {facts.length ? (
             <section aria-labelledby="merchant-facts">
               <h2

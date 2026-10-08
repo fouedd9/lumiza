@@ -11,7 +11,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "test:run": "vitest run",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "format:check": "prettier --check src tests messages \"*.{json,mjs,ts}\" .prettierrc.json AGENTS.md docs/architecture.md docs/business-rules.md --ignore-path .gitignore --ignore-path .prettierignore",
+    "validate": "npm run format:check && npm run lint && npm run typecheck && npm run test:run && npm run build"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^6.11.0",

@@ -29,7 +29,7 @@
     "titleAccent": "wärmer macht.",
     "cta": "Unsere Angebote entdecken",
     "secondaryCta": "Leuchte ansehen",
-    "heroNote": "Drei geplante Ausführungen · Verfügbarkeit noch zu bestätigen",
+    "heroNote": "Drei Ausführungen: Gold, Schwarz und Silber · je nach Lagerbestand",
     "offers": {
       "eyebrow": "Format auswählen",
       "title": "Mehr Licht zum fairen Preis.",
@@ -46,14 +46,14 @@
         "quantity": "Pakete",
         "color": "Ausführung",
         "subtotal": "Zwischensumme",
-        "max": "Höchstens 30 Leuchten pro Bestellung. Die Verfügbarkeit der Ausführungen ist noch nicht bestätigt.",
+        "max": "Maximal 30 Leuchten pro Bestellung.",
         "colors": { "black": "Schwarz", "gold": "Gold", "silver": "Silber" }
       },
       "professional": "Angebot für Unternehmen",
       "savings": "Sie sparen",
       "packNote": "Das PRO-Paket enthält zehn Leuchten.",
-      "colorNote": "Die Verfügbarkeit der Ausführungen muss der Lieferant noch bestätigen.",
-      "pricingNote": "Preise in EUR. Versand innerhalb Frankreichs kostenlos; nach Belgien, Deutschland und in die Schweiz 10 € je Bestellung. Die steuerliche Konfiguration steht noch aus."
+      "colorNote": "Ausführungen in Gold, Schwarz und Silber, je nach Lagerbestand.",
+      "pricingNote": "Preise in EUR. Kostenloser Versand in Frankreich; 10 € pro Bestellung nach Belgien, Deutschland und in die Schweiz."
     }
   },
   "Benefits": {
@@ -61,11 +61,11 @@
     "title": "Für die Momente, die Sie begleiten.",
     "cordless": {
       "title": "Kabellos",
-      "description": "Ein Tischlicht, das sich frei platzieren lässt und während der Nutzung kein Kabel benötigt."
+      "description": "Ein Tischlicht, das sich frei platzieren lässt und während der Nutzung kein Kabel benötigt. Bis zu 4 Stunden Akkulaufzeit laut Hersteller."
     },
     "rechargeable": {
       "title": "Wiederaufladbar",
-      "description": "Die Leuchte wird per USB geladen und begleitet Ihre Räume durch den Alltag."
+      "description": "Vollständige Aufladung in 45 Minuten laut Hersteller."
     },
     "touch": {
       "title": "Touch-Bedienung",
@@ -79,7 +79,7 @@
   "Product": {
     "eyebrow": "LUMIZA entdecken",
     "title": "Ein Lichtobjekt aus jedem Blickwinkel.",
-    "description": "Entdecken Sie die Silhouette der LUMIZA auf Produktfotos in Schwarz, Gold und Silber.",
+    "description": "Entdecken Sie die Silhouette der LUMIZA auf Produktfotos in Schwarz, Gold und Silber. Vollständige Aufladung in 45 Minuten laut Hersteller. Bis zu 4 Stunden Akkulaufzeit laut Hersteller.",
     "gallery": {
       "label": "LUMIZA Produktgalerie",
       "previous": "Vorheriges Bild",
@@ -88,12 +88,12 @@
       "close": "Vergrößertes Bild schließen"
     },
     "colors": {
-      "legend": "Geplante Ausführung",
+      "legend": "Ausführung",
       "black": "Schwarz",
       "gold": "Gold",
       "silver": "Silber",
       "selected": "Auswahl",
-      "provisional": "Schwarz, Gold und Silber stehen noch unter dem Vorbehalt der Lieferantenbestätigung.",
+      "provisional": "Ausführungen in Gold, Schwarz und Silber, je nach Lagerbestand.",
       "missingImage": "Das Bild dieser Ausführung ist derzeit nicht verfügbar."
     },
     "facts": {
@@ -131,7 +131,7 @@
       "title": "Drei elegante Ausführungen",
       "description": "Wählen Sie die passende Ausführung für Ihren Raum: Gold, Silber oder Schwarz."
     },
-    "terraceNote": "Eine Nutzung auf der Terrasse ist unter geeigneten Bedingungen denkbar; eine Wasserbeständigkeit ist derzeit nicht bestätigt."
+    "terraceNote": "Schützen Sie die Leuchte bei der Nutzung auf einer Terrasse vor Wasser und Feuchtigkeit."
   },
   "Faq": {
     "eyebrow": "Das Wesentliche, klar erklärt",
@@ -143,11 +143,11 @@
     },
     "recharge": {
       "question": "Wie wird die Leuchte aufgeladen?",
-      "answer": "Das Aufladen ist per USB vorgesehen. Akkulaufzeit und Ladezeit müssen noch bestätigt werden."
+      "answer": "Aufladung per USB. Vollständige Aufladung in 45 Minuten laut Hersteller. Bis zu 4 Stunden Akkulaufzeit laut Hersteller."
     },
     "colors": {
       "question": "Welche Farben sind erhältlich?",
-      "answer": "Schwarz, Gold und Silber sind geplant, vorbehaltlich der endgültigen Bestätigung durch den Lieferanten."
+      "answer": "LUMIZA ist in Gold, Schwarz und Silber erhältlich. Die bei der Bestellung angebotenen Optionen richten sich nach dem Lagerbestand."
     },
     "multiple": {
       "question": "Kann ich mehrere Leuchten bestellen?",
@@ -182,7 +182,7 @@
     "shippingReturns": "Versand & Rückgabe",
     "cookies": "Cookies",
     "cookiePreferences": "Cookie-Einstellungen",
-    "contactPending": "Kontaktdaten werden vor dem Start veröffentlicht.",
+    "contactPending": "Kontakt: fouedsaidane2@gmail.com",
     "socialLabel": "Soziale Netzwerke",
     "facebook": "LUMIZA auf Facebook",
     "instagram": "LUMIZA auf Instagram",
@@ -264,7 +264,7 @@
     "perPack": "pro Paket",
     "represented": "insgesamt",
     "composition": "Pro Paket:",
-    "tax": "Die steuerliche Konfiguration wird vor echten Verkäufen bestätigt.",
+    "tax": "Preise in EUR. Die Versandkosten werden in der Bestellübersicht angezeigt.",
     "delivery": "Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen.",
     "loading": "Sichere Zahlung wird vorbereitet…",
     "loadingDetail": "Das sichere Zahlungsformular wird geladen.",
@@ -272,11 +272,11 @@
     "unsupportedCountry": "Eine Lieferung in dieses Land ist derzeit nicht möglich.",
     "retryButton": "Erneut versuchen",
     "powered": "Sichere Zahlung mit Stripe.",
-    "unavailable": "Die Zahlung ist noch nicht eingerichtet. Ihre Auswahl bleibt gespeichert.",
+    "unavailable": "Die Zahlung ist vorübergehend nicht verfügbar. Ihre Auswahl bleibt gespeichert.",
     "invalid": "Bitte prüfen Sie Ihre Auswahl und versuchen Sie es erneut.",
     "inventory": "Für diese Auswahl ist nicht genügend Bestand vorhanden.",
     "retry": "Die Bestellung konnte nicht bestätigt werden. Versuchen Sie es mit derselben Auswahl erneut.",
-    "finishNote": "Die Verfügbarkeit der Ausführungen muss der Lieferant noch bestätigen.",
+    "finishNote": "Die Ausführungen werden je nach Lagerbestand angeboten.",
     "cancel": "Diesen Bezahlvorgang abbrechen",
     "canceled": "Dieser Bezahlvorgang wurde abgebrochen. Ihre Auswahl bleibt gespeichert.",
     "colors": { "black": "Schwarz", "gold": "Gold", "silver": "Silber" }
@@ -295,8 +295,8 @@
   },
   "Legal": {
     "pending": "Vor dem Start zu bestätigen",
-    "draftNotice": "Die folgenden Händlerangaben und Geschäftsbedingungen sind unvollständig. Sie müssen vor dem Verkauf geprüft werden; dies ist keine endgültige rechtliche Regelung.",
-    "factsTitle": "Noch erforderliche Angaben zum Händler",
+    "draftNotice": "Bei Fragen erreichen Sie LUMIZA per E-Mail oder WhatsApp über die unten angegebenen Kontaktdaten.",
+    "factsTitle": "Kontaktdaten des Verkäufers",
     "sellerFactsTitle": "Angaben zum Verkäufer",
     "sellerInfo": {
       "withdrawal": "Bei berechtigten Verbraucherkäufen können Sie den Widerruf innerhalb von {days} Tagen ab Erhalt der Ware ohne Angabe von Gründen erklären. Für einen Wertverlust können Sie verantwortlich sein, wenn der Umgang mit der Ware über die Prüfung ihrer Beschaffenheit, Eigenschaften und Funktionsweise hinausgeht. Dieses Recht besteht unabhängig von Ihren Rechten bei mangelhafter oder nicht vertragsgemäßer Ware.",
@@ -305,7 +305,7 @@
       "refunds": "Bei einem wirksamen Widerruf erstatten wir die geschuldeten Beträge einschließlich der ursprünglichen Standardlieferkosten unverzüglich und spätestens 14 Tage nach Ihrer Mitteilung. Wir können die Erstattung bis zum Erhalt der Ware oder eines Versandnachweises zurückhalten, je nachdem, was zuerst eintritt. Die Erstattung erfolgt über das ursprüngliche Zahlungsmittel, sofern Sie nicht ausdrücklich einem anderen, für Sie kostenfreien Verfahren zustimmen. Eine sofortige Erstattung oder zusätzliche freiwillige Geld-zurück-Garantie wird nicht zugesagt.",
       "perOrder": "pro Bestellung",
       "deliveryTime": "Voraussichtliche Lieferung innerhalb von {min}–{max} Werktagen nach Frankreich, Belgien, Deutschland und in die Schweiz.",
-      "switzerland": "Bei Lieferungen in die Schweiz können je nach geltenden Regeln Einfuhrumsatzsteuer, Zölle sowie Bearbeitungsgebühren von Transporteuren oder Zollstellen anfallen. Höhe und Kostentragung müssen vor dem Produktionsstart noch geklärt werden; die LUMIZA-Versandkosten bedeuten nicht, dass Steuern oder Zölle enthalten sind."
+      "switzerland": "Bei Lieferungen in die Schweiz können nach den geltenden Regeln Einfuhrumsatzsteuer, Zölle oder Bearbeitungsgebühren anfallen. Etwaige Beträge hängen vom Einzelfall ab; die LUMIZA-Versandkosten bedeuten nicht, dass diese Steuern oder Zölle enthalten oder bezahlt sind."
     },
     "fields": {
       "legalBusinessName": "Rechtlicher Firmenname",
@@ -328,10 +328,11 @@
     "legal": {
       "title": "Impressum / Rechtliche Hinweise",
       "introduction": "Angaben zum Betreiber dieser Website. Händlerspezifische Daten müssen vor dem Start bestätigt werden.",
+      "displayIntroduction": "Informationen und Kontaktdaten zum LUMIZA-Shop.",
       "sections": {
         "publisher": {
           "title": "Anbieter",
-          "body": "LUMIZA ist die auf dieser Website gezeigte Marke. Rechtliche Identität, Registrierung und Kontaktdaten des Verkäufers wurden noch nicht bereitgestellt."
+          "body": "LUMIZA ist der auf dieser Website verwendete Handelsname."
         },
         "hosting": {
           "title": "Hosting",
@@ -339,7 +340,7 @@
         },
         "contact": {
           "title": "Kontakt",
-          "body": "Vor der Annahme von Bestellungen muss ein verifizierter Kontakt zum Kundenservice bereitstehen."
+          "body": "E-Mail: fouedsaidane2@gmail.com · WhatsApp: +33 7 67 65 30 82."
         }
       }
     },
@@ -418,7 +419,7 @@
         },
         "returns": {
           "title": "Rückgaben und Erstattungen",
-          "body": "Rücksendeadresse, Widerrufsverfahren und Erstattungsregeln stehen unten. Rechte bei mangelhafter oder nicht vertragsgemäßer Ware bleiben davon unberührt."
+          "body": "Sie haben 14 Tage Zeit, Ihr Widerrufsrecht auszuüben. Rücksendeadresse, Verfahren und Erstattungsregeln finden Sie unten. Bei einem Widerruf wegen Meinungsänderung tragen Sie die Rücksendekosten zu den unten genannten Bedingungen. Ihre Rechte bei mangelhaften oder nicht vertragsgemäßen Produkten bleiben davon unberührt."
         },
         "switzerland": {
           "title": "Schweiz",

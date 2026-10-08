@@ -29,7 +29,7 @@
     "titleAccent": "plus doux.",
     "cta": "Découvrir nos offres",
     "secondaryCta": "Voir la lampe",
-    "heroNote": "Trois finitions envisagées · disponibilité à confirmer",
+    "heroNote": "Trois finitions : or, noir et argent · selon les stocks disponibles",
     "offers": {
       "eyebrow": "Choisissez votre format",
       "title": "Plus de lumière, au juste prix.",
@@ -46,14 +46,14 @@
         "quantity": "Packs",
         "color": "Finition",
         "subtotal": "Sous-total",
-        "max": "Maximum de 30 lampes physiques par commande. La disponibilité des finitions reste à confirmer.",
+        "max": "Maximum de 30 lampes physiques par commande.",
         "colors": { "black": "Noir", "gold": "Doré", "silver": "Argenté" }
       },
       "professional": "Offre professionnelle",
       "savings": "Économisez",
       "packNote": "Le pack PRO contient dix lampes.",
-      "colorNote": "La disponibilité des finitions reste soumise à confirmation du fournisseur.",
-      "pricingNote": "Prix en EUR. Livraison gratuite en France ; 10 € par commande vers la Belgique, l’Allemagne et la Suisse. Configuration fiscale à finaliser."
+      "colorNote": "Finitions or, noir et argent, selon les stocks disponibles.",
+      "pricingNote": "Prix en EUR. Livraison gratuite en France ; 10 € par commande vers la Belgique, l’Allemagne et la Suisse."
     }
   },
   "Benefits": {
@@ -61,11 +61,11 @@
     "title": "Pensée pour suivre vos moments.",
     "cordless": {
       "title": "Sans fil",
-      "description": "Une lumière de table qui se place librement, sans câble pendant son utilisation."
+      "description": "Une lumière de table qui se place librement, sans câble pendant son utilisation. Jusqu'à 4 heures d'autonomie annoncées par le constructeur."
     },
     "rechargeable": {
       "title": "Rechargeable",
-      "description": "La lampe se recharge par USB pour accompagner vos espaces au quotidien."
+      "description": "Recharge complète en 45 minutes selon le constructeur."
     },
     "touch": {
       "title": "Commande tactile",
@@ -79,7 +79,7 @@
   "Product": {
     "eyebrow": "Découvrez LUMIZA",
     "title": "Un objet lumineux, sous tous les angles.",
-    "description": "Découvrez la silhouette de LUMIZA en noir, doré et argenté grâce aux photographies du produit.",
+    "description": "Découvrez la silhouette de LUMIZA en noir, doré et argenté grâce aux photographies du produit. Recharge complète en 45 minutes selon le constructeur. Jusqu'à 4 heures d'autonomie annoncées par le constructeur.",
     "gallery": {
       "label": "Galerie produit LUMIZA",
       "previous": "Image précédente",
@@ -88,12 +88,12 @@
       "close": "Fermer l’image agrandie"
     },
     "colors": {
-      "legend": "Finition envisagée",
+      "legend": "Finition",
       "black": "Noir",
       "gold": "Doré",
       "silver": "Argenté",
       "selected": "Sélection",
-      "provisional": "Les finitions noir, doré et argenté restent soumises à confirmation fournisseur.",
+      "provisional": "Finitions or, noir et argent, selon les stocks disponibles.",
       "missingImage": "Le visuel de cette finition est indisponible pour le moment."
     },
     "facts": {
@@ -131,7 +131,7 @@
       "title": "Trois finitions élégantes",
       "description": "Choisissez la finition qui correspond à votre univers : or, argent ou noir."
     },
-    "terraceNote": "Un usage en terrasse peut être envisagé dans des conditions adaptées ; aucune résistance à l’eau n’est confirmée à ce stade."
+    "terraceNote": "Pour une utilisation en terrasse, gardez la lampe à l’abri de l’eau et de l’humidité."
   },
   "Faq": {
     "eyebrow": "L’essentiel, en toute clarté",
@@ -143,11 +143,11 @@
     },
     "recharge": {
       "question": "Comment la lampe se recharge-t-elle ?",
-      "answer": "La recharge est prévue par USB. L’autonomie et le temps de recharge restent à confirmer."
+      "answer": "Recharge par USB. Recharge complète en 45 minutes selon le constructeur. Jusqu'à 4 heures d'autonomie annoncées par le constructeur."
     },
     "colors": {
       "question": "Quelles couleurs sont disponibles ?",
-      "answer": "Les finitions noir, doré et argenté sont envisagées, sous réserve de confirmation finale du fournisseur."
+      "answer": "LUMIZA se décline en or, noir et argent. Les options proposées à la commande dépendent des stocks disponibles."
     },
     "multiple": {
       "question": "Puis-je commander plusieurs lampes ?",
@@ -182,7 +182,7 @@
     "shippingReturns": "Livraison et retours",
     "cookies": "Cookies",
     "cookiePreferences": "Préférences des cookies",
-    "contactPending": "Coordonnées de contact à publier avant le lancement.",
+    "contactPending": "Contact : fouedsaidane2@gmail.com",
     "socialLabel": "Réseaux sociaux",
     "facebook": "Facebook LUMIZA",
     "instagram": "Instagram LUMIZA",
@@ -264,7 +264,7 @@
     "perPack": "par pack",
     "represented": "au total",
     "composition": "Par pack :",
-    "tax": "La configuration fiscale sera confirmée avant les ventes réelles.",
+    "tax": "Prix en EUR. Les frais de livraison sont indiqués dans le récapitulatif.",
     "delivery": "Livraison estimée sous {min} à {max} jours ouvrés.",
     "loading": "Sécurisation de votre paiement…",
     "loadingDetail": "Chargement du formulaire de paiement sécurisé.",
@@ -272,11 +272,11 @@
     "unsupportedCountry": "Ce pays de livraison n’est pas disponible pour le moment.",
     "retryButton": "Réessayer",
     "powered": "Paiement sécurisé assuré par Stripe.",
-    "unavailable": "Le paiement n’est pas encore configuré. Votre sélection reste enregistrée.",
+    "unavailable": "Le paiement est momentanément indisponible. Votre sélection reste enregistrée.",
     "invalid": "Vérifiez votre sélection et réessayez.",
     "inventory": "Le stock disponible ne suffit pas pour cette sélection.",
     "retry": "La commande n’a pas pu être confirmée. Réessayez avec la même sélection.",
-    "finishNote": "La disponibilité des finitions dépend de la confirmation du fournisseur.",
+    "finishNote": "Les finitions sont proposées selon les stocks disponibles.",
     "cancel": "Annuler ce paiement",
     "canceled": "Ce paiement a été annulé. Votre sélection est conservée.",
     "colors": { "black": "Noir", "gold": "Or", "silver": "Argent" }
@@ -295,8 +295,8 @@
   },
   "Legal": {
     "pending": "À confirmer avant le lancement",
-    "draftNotice": "Les informations sur le vendeur et les politiques commerciales ci-dessous sont incomplètes. Elles doivent être vérifiées avant toute vente ; ce texte n'est pas une politique juridique définitive.",
-    "factsTitle": "Informations propres au vendeur encore nécessaires",
+    "draftNotice": "Pour toute question, contactez LUMIZA par e-mail ou sur WhatsApp aux coordonnées ci-dessous.",
+    "factsTitle": "Coordonnées du vendeur",
     "sellerFactsTitle": "Informations propres au vendeur",
     "sellerInfo": {
       "withdrawal": "Pour les achats de consommateurs éligibles, vous disposez de {days} jours à compter de la réception du bien pour notifier votre rétractation, sans motif. Une dépréciation peut être mise à votre charge si les manipulations dépassent celles nécessaires pour établir la nature, les caractéristiques et le bon fonctionnement du bien. Ce droit est distinct de vos droits en cas de défaut ou de non-conformité.",
@@ -305,7 +305,7 @@
       "refunds": "En cas de rétractation valable, les sommes dues, y compris les frais de livraison standard initiaux, sont remboursées sans retard injustifié et au plus tard 14 jours après notification de votre décision. Le remboursement peut être différé jusqu'à la réception du bien ou d'une preuve de son expédition, selon la première éventualité. Il utilise le moyen de paiement initial, sauf accord exprès pour un autre moyen sans frais pour vous. Aucun remboursement instantané ni garantie commerciale supplémentaire n'est promis.",
       "perOrder": "par commande",
       "deliveryTime": "Livraison estimée sous {min} à {max} jours ouvrés pour la France, la Belgique, l’Allemagne et la Suisse.",
-      "switzerland": "Une livraison en Suisse peut entraîner de la TVA à l'importation, des droits de douane ou des frais de traitement du transporteur ou des douanes selon les règles applicables. Leur montant et leur prise en charge doivent encore être confirmés avant la production ; les frais de livraison LUMIZA ne promettent pas des taxes ou droits inclus."
+      "switzerland": "Une livraison en Suisse peut entraîner de la TVA à l'importation, des droits de douane ou des frais de traitement selon les règles applicables. Leur montant éventuel dépend de la situation ; les frais de livraison LUMIZA ne signifient pas que ces taxes ou droits sont inclus ou acquittés."
     },
     "fields": {
       "legalBusinessName": "Dénomination légale",
@@ -328,10 +328,11 @@
     "legal": {
       "title": "Mentions légales",
       "introduction": "Informations sur l'exploitant de ce site. Les coordonnées propres au vendeur restent à confirmer avant le lancement.",
+      "displayIntroduction": "Informations et coordonnées de contact de la boutique LUMIZA.",
       "sections": {
         "publisher": {
           "title": "Éditeur",
-          "body": "LUMIZA est la marque présentée sur ce site. L'identité légale, l'immatriculation et les coordonnées du vendeur n'ont pas encore été communiquées."
+          "body": "LUMIZA est le nom commercial présenté sur ce site."
         },
         "hosting": {
           "title": "Hébergement",
@@ -339,7 +340,7 @@
         },
         "contact": {
           "title": "Contact",
-          "body": "Un moyen de contacter le service client devra être vérifié avant l'acceptation des commandes."
+          "body": "E-mail : fouedsaidane2@gmail.com · WhatsApp : +33 7 67 65 30 82."
         }
       }
     },
@@ -418,7 +419,7 @@
         },
         "returns": {
           "title": "Retours et remboursements",
-          "body": "L'adresse de retour, la procédure de rétractation et les règles de remboursement figurent ci-dessous. Elles sont distinctes des droits applicables aux produits défectueux ou non conformes."
+          "body": "Vous disposez de 14 jours pour exercer votre droit de rétractation. L’adresse de retour, la procédure et les règles de remboursement figurent ci-dessous. Les frais de retour pour un changement d’avis sont à votre charge dans les conditions précisées ci-dessous. Vos droits en cas de produit défectueux ou non conforme restent distincts."
         },
         "switzerland": {
           "title": "Suisse",

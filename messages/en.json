@@ -29,7 +29,7 @@
     "titleAccent": "feel warmer.",
     "cta": "Explore our offers",
     "secondaryCta": "See the lamp",
-    "heroNote": "Three planned finishes · availability to be confirmed",
+    "heroNote": "Three finishes: gold, black and silver · subject to stock availability",
     "offers": {
       "eyebrow": "Choose your format",
       "title": "More light, fairly priced.",
@@ -46,14 +46,14 @@
         "quantity": "Packs",
         "color": "Finish",
         "subtotal": "Subtotal",
-        "max": "Maximum 30 physical lamps per order. Finish availability is not yet confirmed.",
+        "max": "Maximum 30 physical lamps per order.",
         "colors": { "black": "Black", "gold": "Gold", "silver": "Silver" }
       },
       "professional": "Professional offer",
       "savings": "Save",
       "packNote": "The PRO pack contains ten lamps.",
-      "colorNote": "Finish availability remains subject to supplier confirmation.",
-      "pricingNote": "Prices in EUR. Shipping is free in France and €10 per order to Belgium, Germany and Switzerland. Tax configuration is not finalised."
+      "colorNote": "Gold, black and silver finishes, subject to stock availability.",
+      "pricingNote": "Prices in EUR. Free delivery in France; €10 per order to Belgium, Germany and Switzerland."
     }
   },
   "Benefits": {
@@ -61,11 +61,11 @@
     "title": "Designed to move with your moments.",
     "cordless": {
       "title": "Cordless",
-      "description": "A table light that can be placed freely, with no cable needed while in use."
+      "description": "A table light that can be placed freely, with no cable needed while in use. Up to 4 hours of battery life, according to the manufacturer."
     },
     "rechargeable": {
       "title": "Rechargeable",
-      "description": "The lamp recharges by USB, ready to accompany your everyday spaces."
+      "description": "Full recharge in 45 minutes, according to the manufacturer."
     },
     "touch": {
       "title": "Touch control",
@@ -79,7 +79,7 @@
   "Product": {
     "eyebrow": "Meet LUMIZA",
     "title": "A luminous object, from every angle.",
-    "description": "Discover the LUMIZA silhouette in black, gold and silver through photographs of the product.",
+    "description": "Discover the LUMIZA silhouette in black, gold and silver through photographs of the product. Full recharge in 45 minutes, according to the manufacturer. Up to 4 hours of battery life, according to the manufacturer.",
     "gallery": {
       "label": "LUMIZA product gallery",
       "previous": "Previous image",
@@ -88,12 +88,12 @@
       "close": "Close expanded image"
     },
     "colors": {
-      "legend": "Planned finish",
+      "legend": "Finish",
       "black": "Black",
       "gold": "Gold",
       "silver": "Silver",
       "selected": "Selection",
-      "provisional": "Black, gold and silver finishes remain subject to supplier confirmation.",
+      "provisional": "Gold, black and silver finishes, subject to stock availability.",
       "missingImage": "The image for this finish is temporarily unavailable."
     },
     "facts": {
@@ -131,7 +131,7 @@
       "title": "Three elegant finishes",
       "description": "Choose the finish that suits your space: gold, silver or black."
     },
-    "terraceNote": "Terrace use may be considered in suitable conditions; no water-resistance rating has been confirmed at this stage."
+    "terraceNote": "When using the lamp on a terrace, keep it sheltered from water and moisture."
   },
   "Faq": {
     "eyebrow": "The essentials, clearly explained",
@@ -143,11 +143,11 @@
     },
     "recharge": {
       "question": "How is the lamp recharged?",
-      "answer": "Charging is planned via USB. Battery life and charging time still need to be confirmed."
+      "answer": "USB charging. Full recharge in 45 minutes, according to the manufacturer. Up to 4 hours of battery life, according to the manufacturer."
     },
     "colors": {
       "question": "Which colours are available?",
-      "answer": "Black, gold and silver finishes are planned, subject to final supplier confirmation."
+      "answer": "LUMIZA comes in gold, black and silver. The options offered at checkout depend on available stock."
     },
     "multiple": {
       "question": "Can I order several lamps?",
@@ -182,7 +182,7 @@
     "shippingReturns": "Shipping & returns",
     "cookies": "Cookies",
     "cookiePreferences": "Cookie preferences",
-    "contactPending": "Contact details will be published before launch.",
+    "contactPending": "Contact: fouedsaidane2@gmail.com",
     "socialLabel": "Social media",
     "facebook": "LUMIZA on Facebook",
     "instagram": "LUMIZA on Instagram",
@@ -264,7 +264,7 @@
     "perPack": "per pack",
     "represented": "in total",
     "composition": "Per pack:",
-    "tax": "Tax configuration will be confirmed before live sales.",
+    "tax": "Prices in EUR. Delivery charges are shown in the order summary.",
     "delivery": "Estimated delivery within {min}–{max} business days.",
     "loading": "Preparing secure payment…",
     "loadingDetail": "Loading the secure payment form.",
@@ -272,11 +272,11 @@
     "unsupportedCountry": "Delivery to this country is not available yet.",
     "retryButton": "Retry",
     "powered": "Secure payment powered by Stripe.",
-    "unavailable": "Checkout is not configured yet. Your selection remains saved.",
+    "unavailable": "Payment is temporarily unavailable. Your selection is saved.",
     "invalid": "Please review your selection and try again.",
     "inventory": "There is not enough stock for this selection.",
     "retry": "Checkout could not be confirmed. Retry using the same selection.",
-    "finishNote": "Finish availability is subject to supplier confirmation.",
+    "finishNote": "Finishes are offered subject to stock availability.",
     "cancel": "Cancel this checkout",
     "canceled": "This checkout was canceled. Your selection is saved.",
     "colors": { "black": "Black", "gold": "Gold", "silver": "Silver" }
@@ -295,8 +295,8 @@
   },
   "Legal": {
     "pending": "To be confirmed before launch",
-    "draftNotice": "Merchant details and commercial policies below are incomplete. This information must be verified before sales begin; it is not a final legal policy.",
-    "factsTitle": "Merchant-specific information still required",
+    "draftNotice": "For any questions, contact LUMIZA by email or WhatsApp using the details below.",
+    "factsTitle": "Seller contact details",
     "sellerFactsTitle": "Seller information",
     "sellerInfo": {
       "withdrawal": "For eligible consumer purchases, you have {days} days from receipt of the goods to notify us of withdrawal, without giving a reason. You may be responsible for any diminished value caused by handling beyond what is needed to establish the goods' nature, characteristics and functioning. This right is separate from your rights if goods are defective or do not conform to the contract.",
@@ -305,7 +305,7 @@
       "refunds": "For a valid withdrawal, amounts due, including the original standard delivery charge, are refunded without undue delay and no later than 14 days after we are informed of your decision. We may defer reimbursement until we receive the goods or evidence that you sent them back, whichever is earlier. We use the original payment method unless you expressly agree to another method at no extra cost to you. No instant refund or additional commercial money-back guarantee is promised.",
       "perOrder": "per order",
       "deliveryTime": "Estimated delivery within {min}–{max} business days for France, Belgium, Germany and Switzerland.",
-      "switzerland": "Delivery to Switzerland may involve import VAT, customs duties and carrier or customs processing charges under the applicable rules. Their amounts and who bears them still require confirmation before production; LUMIZA's shipping charge does not promise that taxes or duties are included."
+      "switzerland": "Delivery to Switzerland may involve import VAT, customs duties or processing charges under the applicable rules. Any amounts depend on the circumstances; LUMIZA's shipping charge does not mean that these taxes or duties are included or paid."
     },
     "fields": {
       "legalBusinessName": "Legal business name",
@@ -328,10 +328,11 @@
     "legal": {
       "title": "Legal notice",
       "introduction": "Information about the operator of this website. Merchant-specific details remain to be confirmed before launch.",
+      "displayIntroduction": "Information and contact details for the LUMIZA shop.",
       "sections": {
         "publisher": {
           "title": "Publisher",
-          "body": "LUMIZA is the brand shown on this website. The legal identity, registration and contact details of the seller have not yet been supplied."
+          "body": "LUMIZA is the trading name presented on this website."
         },
         "hosting": {
           "title": "Hosting",
@@ -339,7 +340,7 @@
         },
         "contact": {
           "title": "Contact",
-          "body": "A verified customer contact channel must be provided before orders are accepted."
+          "body": "Email: fouedsaidane2@gmail.com · WhatsApp: +33 7 67 65 30 82."
         }
       }
     },
@@ -418,7 +419,7 @@
         },
         "returns": {
           "title": "Returns and refunds",
-          "body": "The return address, withdrawal procedure and refund rules appear below. They are separate from rights concerning defective or non-conforming goods."
+          "body": "You have 14 days to exercise your right of withdrawal. The return address, procedure and refund rules are set out below. You bear the return costs for a change of mind under the conditions below. Your rights for defective or non-conforming goods remain separate."
         },
         "switzerland": {
           "title": "Switzerland",

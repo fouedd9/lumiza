@@ -21,6 +21,7 @@ export type LegalKind =
 type PageCopy = {
   title: string;
   introduction: string;
+  displayIntroduction?: string;
   sections: Record<string, { title: string; body: string }>;
 };
 
@@ -102,7 +103,6 @@ export async function LegalPage({
   const t = await getTranslations({ locale, namespace: "Legal" });
   const checkout = await getTranslations({ locale, namespace: "Checkout" });
   const copy = t.raw(kind) as PageCopy;
-  const pending = t("pending");
   const shippingSummary = ENABLED_COUNTRIES.map(
     (country) =>
       `${checkout(`countries.${country}`)}: ${formatCurrency(shippingCents(country), "EUR", locale)}`,
@@ -114,7 +114,10 @@ export async function LegalPage({
           [t("fields.registrationNumber"), business.registrationNumber],
           [t("fields.vatNumber"), business.vatNumber],
           [t("fields.registeredAddress"), business.registeredAddress],
-          [t("fields.contactEmail"), business.contactEmail],
+          [
+            t("fields.contactEmail"),
+            business.contactEmail ?? business.supportEmail,
+          ],
           [t("fields.publicationDirector"), business.publicationDirector],
           [t("fields.hostingProvider"), business.hostingProvider],
         ]
@@ -166,7 +169,7 @@ export async function LegalPage({
           {copy.title}
         </h1>
         <p className="text-muted-foreground mt-6 max-w-3xl leading-7">
-          {copy.introduction}
+          {copy.displayIntroduction ?? copy.introduction}
         </p>
         {kind === "legal" ? (
           <p className="border-primary/40 bg-surface-elevated mt-8 rounded-xl border p-4 text-sm">
@@ -174,32 +177,49 @@ export async function LegalPage({
           </p>
         ) : null}
         <div className="mt-12 space-y-10">
-          {Object.entries(copy.sections).map(([key, section]) => (
-            <section key={key} aria-labelledby={`legal-${key}`}>
-              <h2
-                id={`legal-${key}`}
-                className="font-display text-2xl font-bold break-words"
-              >
-                {section.title}
-              </h2>
-              <p className="text-muted-foreground mt-3 leading-7">
-                {kind === "terms" && key === "delivery"
-                  ? t("terms.sections.delivery.body", {
+          {Object.entries(copy.sections)
+            .filter(
+              ([key]) =>
+                kind !== "legal" ||
+                key !== "hosting" ||
+                business.hostingProvider !== null,
+            )
+            .map(([key, section]) => (
+              <section key={key} aria-labelledby={`legal-${key}`}>
+                <h2
+                  id={`legal-${key}`}
+                  className="font-display text-2xl font-bold break-words"
+                >
+                  {section.title}
+                </h2>
+                <p className="text-muted-foreground mt-3 leading-7">
+                  {kind === "legal" && key === "contact" ? (
+                    <>
+                      <a href={`mailto:${business.supportEmail}`}>
+                        {business.supportEmail}
+                      </a>
+                      {" · WhatsApp : "}
+                      <a href="https://wa.me/33767653082">+33 7 67 65 30 82</a>
+                    </>
+                  ) : kind === "terms" && key === "delivery" ? (
+                    t("terms.sections.delivery.body", {
                       min: commercePolicy.deliveryTimes.minBusinessDays,
                       max: commercePolicy.deliveryTimes.maxBusinessDays,
                     })
-                  : kind === "shippingReturns" && key === "timing"
-                    ? t("shippingReturns.sections.timing.body", {
-                        min: commercePolicy.deliveryTimes.minBusinessDays,
-                        max: commercePolicy.deliveryTimes.maxBusinessDays,
-                      })
-                    : section.body}
-              </p>
-              {kind === "terms" && key === "disputes" ? (
-                <TermsContact locale={locale} />
-              ) : null}
-            </section>
-          ))}
+                  ) : kind === "shippingReturns" && key === "timing" ? (
+                    t("shippingReturns.sections.timing.body", {
+                      min: commercePolicy.deliveryTimes.minBusinessDays,
+                      max: commercePolicy.deliveryTimes.maxBusinessDays,
+                    })
+                  ) : (
+                    section.body
+                  )}
+                </p>
+                {kind === "terms" && key === "disputes" ? (
+                  <TermsContact locale={locale} />
+                ) : null}
+              </section>
+            ))}
           {kind === "privacy" ? <PrivacyContact locale={locale} /> : null}
           {facts.length ? (
             <section aria-labelledby="merchant-facts">
@@ -212,14 +232,16 @@ export async function LegalPage({
                   : t("factsTitle")}
               </h2>
               <dl className="border-border mt-4 divide-y rounded-xl border px-5">
-                {facts.map(([label, value]) => (
-                  <div key={label} className="grid gap-2 py-3 sm:grid-cols-2">
-                    <dt className="font-semibold break-words">{label}</dt>
-                    <dd className="text-muted-foreground break-words whitespace-pre-line">
-                      {value ?? pending}
-                    </dd>
-                  </div>
-                ))}
+                {facts
+                  .filter(([, value]) => value !== null && value !== "")
+                  .map(([label, value]) => (
+                    <div key={label} className="grid gap-2 py-3 sm:grid-cols-2">
+                      <dt className="font-semibold break-words">{label}</dt>
+                      <dd className="text-muted-foreground break-words whitespace-pre-line">
+                        {value}
+                      </dd>
+                    </div>
+                  ))}
               </dl>
             </section>
           ) : null}

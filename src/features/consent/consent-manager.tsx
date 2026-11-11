@@ -138,7 +138,7 @@ export function ConsentManager() {
             </button>
             <button
               type="button"
-              onClick={() => choose({ analytics: false, marketing: false })}
+              onClick={() => choose({ analytics: true, marketing: true })}
               className="border-border min-h-11 rounded-full border px-5 font-bold"
             >
               {t("rejectOptional")}

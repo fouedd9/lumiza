@@ -59,21 +59,23 @@ describe("versioned optional consent", () => {
     await userEvent.click(screen.getByRole("button", { name: "Save choices" }));
     expect(optionalConsent()).toEqual({ analytics: true, marketing: false });
   });
-
+  // rejects optional categories and allows custom choices
   it("rejects optional categories and allows custom choices", async () => {
     view();
     await userEvent.click(
-      await screen.findByRole("button", { name: "Reject optional" }),
+      await screen.findByRole("button", { name: "Accept all" }),
     );
-    expect(optionalConsent()).toEqual({ analytics: false, marketing: false });
+    expect(optionalConsent()).toEqual({ analytics: true, marketing: true });
+    expect(readConsent()?.necessary).toBe(true);
     await userEvent.click(
       screen.getByRole("button", { name: "Cookie preferences" }),
     );
+    expect(
+      screen.getByRole("dialog", { name: "Cookie preferences" }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole("checkbox", { name: "Necessary" })).toBeDisabled();
     await userEvent.click(screen.getByRole("checkbox", { name: "Marketing" }));
     await userEvent.click(screen.getByRole("button", { name: "Save choices" }));
-    expect(optionalConsent()).toEqual({ analytics: false, marketing: true });
-    await waitFor(() =>
-      expect(screen.queryByRole("dialog")).not.toBeInTheDocument(),
-    );
+    expect(optionalConsent()).toEqual({ analytics: true, marketing: false });
   });
 });

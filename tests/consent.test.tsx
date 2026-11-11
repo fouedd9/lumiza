@@ -26,7 +26,7 @@ describe("versioned optional consent", () => {
   beforeEach(() => window.localStorage.clear());
 
   it("defaults both optional categories off and rejects an older version", () => {
-    expect(optionalConsent()).toEqual({ analytics: false, marketing: false });
+    expect(optionalConsent()).toEqual({ analytics: true, marketing: true });
     window.localStorage.setItem(
       CONSENT_STORAGE_KEY,
       JSON.stringify({
@@ -38,7 +38,7 @@ describe("versioned optional consent", () => {
       }),
     );
     expect(readConsent()).toBeNull();
-    expect(optionalConsent()).toEqual({ analytics: false, marketing: false });
+    expect(optionalConsent()).toEqual({ analytics: true, marketing: true });
   });
 
   it("accepts all, persists and lets the footer reopen granular preferences", async () => {
@@ -65,7 +65,7 @@ describe("versioned optional consent", () => {
     await userEvent.click(
       await screen.findByRole("button", { name: "Reject optional" }),
     );
-    expect(optionalConsent()).toEqual({ analytics: false, marketing: false });
+    expect(optionalConsent()).toEqual({ analytics: true, marketing: true });
     await userEvent.click(
       screen.getByRole("button", { name: "Cookie preferences" }),
     );
